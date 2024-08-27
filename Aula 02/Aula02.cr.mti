@@ -1,0 +1,24 @@
+{C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/Aula 02/Exer_2_7_8.vhdl} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/Aula 02/Exer_2_7_8.vhdl}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Compiling entity errad_2
+-- Compiling architecture behavioral of errad_2
+** Error: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/Aula 02/Exer_2_7_8.vhdl(23): near "<=": (vcom-1576) expecting == or '+' or '-' or '&'.
+** Error: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/Aula 02/Exer_2_7_8.vhdl(24): (vcom-1389) OTHERS aggregate cannot be operand of operator with unconstrained array formal.
+** Error: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/Aula 02/Exer_2_7_8.vhdl(25): (vcom-1581) No feasible entries for infix operator '&'.
+** Error: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/Aula 02/Exer_2_7_8.vhdl(25): Type error resolving infix expression "&" as type std.STANDARD.BIT_VECTOR.
+** Error: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/Aula 02/Exer_2_7_8.vhdl(26): VHDL Compiler exiting
+
+} {6.0 11.0} {}} {C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/Aula 02/Exer_2_7_1.vhdl} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/Aula 02/Exer_2_7_1.vhdl}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Compiling entity express
+-- Compiling architecture behavioral of express
+
+} {} {}} {C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/Aula 02/Exer_2_7_7.vhdl} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/Aula 02/Exer_2_7_7.vhdl}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Compiling entity errad_1
+-- Compiling architecture behavioral of errad_1
+
+} {} {}}
