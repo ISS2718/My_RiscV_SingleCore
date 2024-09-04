@@ -1,0 +1,4 @@
+v 4
+file . "Exer_2_7_8.vhdl" "aa77cd5bff8f6e04d137377aaf196b8ae2eb3fcc" "20240904040601.577":
+  entity errad_2 at 12( 155) + 0 on 13;
+  architecture behavioral of errad_2 at 19( 278) + 0 on 14;

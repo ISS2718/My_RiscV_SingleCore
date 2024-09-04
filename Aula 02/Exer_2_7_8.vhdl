@@ -20,7 +20,8 @@ ARCHITECTURE behavioral OF errad_2 IS
 BEGIN
   r(0 TO 2) <= a & b & c;
   s <= a & b & c & "010";
-  t(0 TO 2) & u(3 TO 5) <= "101101";
-  v <= a & (OTHERS => '0');
-  x <= a & (OTHERS => '0') & 1;
+  t(0 TO 2) <= "101";
+  u(3 TO 5) <= "101";
+  v <= (0 => a, OTHERS => '0');
+  x <= (0 => a, 5 => '1', OTHERS => '0');
 END behavioral;
