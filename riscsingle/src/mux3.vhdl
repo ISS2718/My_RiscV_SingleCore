@@ -2,10 +2,6 @@
 --Nome Isaac Santos Soares
 --NUSP 12751713
 --
---Multiplexador de 2 entradas
-
---Descrição:
---
 --Um multiplixador simples de três entradas: d0, d1 e d2, com uma chave seletrora s.
 --Se s = "00", a saída y é igual a d0.
 --Se s = "01", a saída y é igual a d1.
@@ -13,12 +9,14 @@
 --Caso contrário, y é igual a 0.
 --
 ----------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
 
 entity mux3 is
   port (
-    d0, d1, d2 : in bit;
-    s : in bit_vector (0 to 1);
-    y : out bit
+    d0, d1, d2 : in std_logic;
+    s : in std_logic_vector (0 to 1);
+    y : out std_logic
   ) ;
 end mux3;
 architecture behavioral of mux3 is
