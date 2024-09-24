@@ -1,6 +1,10 @@
 ----------------------------
---Nome Isaac Santos Soares
---NUSP 12751713
+--Autor Isaac Santos Soares
+--nUSP 12751713
+--
+--Copyright (c) 2024 Isaac Soares
+--Licenciado sob a Licença MIT
+--Última modificação: 2023-10-05
 --
 -- Registrador de 32 bits com borda de subida e reset assíncrono.
 --

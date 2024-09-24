@@ -1,5 +1,5 @@
 Analysis & Synthesis report for riscsingle
-Tue Sep 17 21:19:38 2024
+Tue Sep 24 17:01:37 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -43,16 +43,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Sep 17 21:19:38 2024          ;
+; Analysis & Synthesis Status        ; Successful - Tue Sep 24 17:01:37 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; riscsingle                                     ;
-; Top-level Entity Name              ; mux3                                           ;
+; Top-level Entity Name              ; mux4                                           ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 2                                              ;
-;     Total combinational functions  ; 2                                              ;
+; Total logic elements               ; 0                                              ;
+;     Total combinational functions  ; 0                                              ;
 ;     Dedicated logic registers      ; 0                                              ;
 ; Total registers                    ; 0                                              ;
-; Total pins                         ; 6                                              ;
+; Total pins                         ; 162                                            ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                            ; mux3               ; riscsingle         ;
+; Top-level entity name                                            ; mux4               ; riscsingle         ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Maximum processors allowed for parallel compilation              ; 4                  ;                    ;
 ; Use smart compilation                                            ; Off                ; Off                ;
@@ -170,40 +170,39 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                        ; Library ;
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
-; ../src/mux3.vhdl                 ; yes             ; User VHDL File  ; C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux3.vhdl ;         ;
+; ../src/mux4.vhdl                 ; yes             ; User VHDL File  ; C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl ;         ;
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimated Total logic elements              ; 2          ;
-;                                             ;            ;
-; Total combinational functions               ; 2          ;
-; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 2          ;
-;     -- 3 input functions                    ; 0          ;
-;     -- <=2 input functions                  ; 0          ;
-;                                             ;            ;
-; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 2          ;
-;     -- arithmetic mode                      ; 0          ;
-;                                             ;            ;
-; Total registers                             ; 0          ;
-;     -- Dedicated logic registers            ; 0          ;
-;     -- I/O registers                        ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 6          ;
-;                                             ;            ;
-; Embedded Multiplier 9-bit elements          ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; s[0]~input ;
-; Maximum fan-out                             ; 2          ;
-; Total fan-out                               ; 15         ;
-; Average fan-out                             ; 1.07       ;
-+---------------------------------------------+------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 162   ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; d0[0] ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 162   ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -211,7 +210,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |mux3                      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 6    ; 0            ; 0          ; |mux3               ; mux3        ; work         ;
+; |mux4                      ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 162  ; 0            ; 0          ; |mux4               ; mux4        ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -236,13 +235,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 6                           ;
-; cycloneiii_lcell_comb ; 2                           ;
-;     normal            ; 2                           ;
-;         4 data inputs ; 2                           ;
+; boundary_port         ; 162                         ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.86                        ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -261,35 +260,195 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Sep 17 21:19:30 2024
+    Info: Processing started: Tue Sep 24 17:01:29 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off riscsingle -c riscsingle
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
+Info (12021): Found 2 design units, including 1 entities, in source file /users/isaac/onedrive/documentos/_my_projects/vhdl_study/riscsingle/src/mux4.vhdl
+    Info (12022): Found design unit 1: mux4-behavioral File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 27
+    Info (12023): Found entity 1: mux4 File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 19
 Info (12021): Found 2 design units, including 1 entities, in source file /users/isaac/onedrive/documentos/_my_projects/vhdl_study/riscsingle/src/flopr.vhdl
-    Info (12022): Found design unit 1: flopr-behavioral File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/flopr.vhdl Line: 19
-    Info (12023): Found entity 1: flopr File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/flopr.vhdl Line: 11
+    Info (12022): Found design unit 1: flopr-behavioral File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/flopr.vhdl Line: 23
+    Info (12023): Found entity 1: flopr File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/flopr.vhdl Line: 15
 Info (12021): Found 2 design units, including 1 entities, in source file /users/isaac/onedrive/documentos/_my_projects/vhdl_study/riscsingle/src/mux2.vhdl
-    Info (12022): Found design unit 1: mux2-behavioral File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux2.vhdl Line: 18
-    Info (12023): Found entity 1: mux2 File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux2.vhdl Line: 12
-Info (12021): Found 2 design units, including 1 entities, in source file /users/isaac/onedrive/documentos/_my_projects/vhdl_study/riscsingle/src/mux3_32bits.vhdl
-    Info (12022): Found design unit 1: mux3_32bits-behavioral File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux3_32bits.vhdl Line: 22
-    Info (12023): Found entity 1: mux3_32bits File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux3_32bits.vhdl Line: 15
+    Info (12022): Found design unit 1: mux2-behavioral File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux2.vhdl Line: 23
+    Info (12023): Found entity 1: mux2 File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux2.vhdl Line: 16
 Info (12021): Found 2 design units, including 1 entities, in source file /users/isaac/onedrive/documentos/_my_projects/vhdl_study/riscsingle/src/mux3.vhdl
-    Info (12022): Found design unit 1: mux3-behavioral File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux3.vhdl Line: 22
-    Info (12023): Found entity 1: mux3 File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux3.vhdl Line: 15
-Info (12021): Found 2 design units, including 1 entities, in source file /users/isaac/onedrive/documentos/_my_projects/vhdl_study/riscsingle/src/mux2_32bits.vhdl
-    Info (12022): Found design unit 1: mux2_32bits-behavioral File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux2_32bits.vhdl Line: 19
-    Info (12023): Found entity 1: mux2_32bits File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux2_32bits.vhdl Line: 12
-Info (12127): Elaborating entity "mux3" for the top level hierarchy
-Info (286030): Timing-Driven Synthesis is running
+    Info (12022): Found design unit 1: mux3-behavioral File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux3.vhdl Line: 26
+    Info (12023): Found entity 1: mux3 File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux3.vhdl Line: 19
+Info (12127): Elaborating entity "mux4" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at mux4.vhdl(23): used implicit default value for signal "y" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "y[0]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[1]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[2]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[3]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[4]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[5]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[6]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[7]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[8]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[9]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[10]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[11]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[12]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[13]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[14]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[15]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[16]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[17]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[18]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[19]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[20]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[21]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[22]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[23]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[24]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[25]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[26]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[27]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[28]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[29]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[30]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
+    Warning (13410): Pin "y[31]" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 23
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 8 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 2 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4805 megabytes
-    Info: Processing ended: Tue Sep 17 21:19:38 2024
+Warning (21074): Design contains 130 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "d0[0]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[1]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[2]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[3]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[4]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[5]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[6]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[7]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[8]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[9]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[10]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[11]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[12]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[13]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[14]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[15]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[16]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[17]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[18]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[19]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[20]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[21]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[22]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[23]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[24]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[25]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[26]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[27]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[28]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[29]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[30]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d0[31]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[0]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[1]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[2]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[3]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[4]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[5]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[6]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[7]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[8]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[9]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[10]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[11]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[12]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[13]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[14]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[15]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[16]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[17]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[18]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[19]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[20]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[21]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[22]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[23]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[24]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[25]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[26]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[27]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[28]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[29]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[30]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d1[31]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[0]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[1]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[2]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[3]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[4]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[5]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[6]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[7]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[8]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[9]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[10]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[11]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[12]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[13]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[14]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[15]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[16]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[17]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[18]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[19]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[20]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[21]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[22]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[23]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[24]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[25]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[26]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[27]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[28]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[29]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[30]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d2[31]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[0]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[1]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[2]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[3]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[4]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[5]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[6]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[7]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[8]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[9]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[10]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[11]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[12]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[13]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[14]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[15]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[16]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[17]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[18]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[19]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[20]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[21]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[22]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[23]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[24]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[25]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[26]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[27]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[28]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[29]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[30]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "d3[31]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "s[0]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 22
+    Warning (15610): No output dependent on input pin "s[1]" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 22
+Info (21057): Implemented 162 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 130 input pins
+    Info (21059): Implemented 32 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 165 warnings
+    Info: Peak virtual memory: 4802 megabytes
+    Info: Processing ended: Tue Sep 24 17:01:37 2024
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:11
 
