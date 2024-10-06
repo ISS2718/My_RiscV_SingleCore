@@ -1,13 +1,13 @@
 ----------------------------
---Autor Isaac Santos Soares
+--Author Isaac Santos Soares
 --nUSP 12751713
 --
 --Copyright (c) 2024 Isaac Soares
---Licenciado sob a Licença MIT
---Última modificação: 2023-10-05
+--Licensed under the MIT License
+--Last modified: 2023-10-05
 --
---Um multiplixador simples de duas entradas: d0; d1, com uma chave seletrora s.
---Se s = 0, a saída y é igual a d0, caso contrário, y é igual a d1.
+--A simple two-input multiplexer: d0; d1, with a selector switch s.
+--If s = 0, the output y is equal to d0, otherwise, y is equal to d1.
 --
 ----------------------------
 library IEEE;

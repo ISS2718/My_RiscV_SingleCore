@@ -1,12 +1,12 @@
 ----------------------------
---Autor Isaac Santos Soares
+--Author Isaac Santos Soares
 --nUSP 12751713
 --
 --Copyright (c) 2024 Isaac Soares
---Licenciado sob a Licença MIT
---Última modificação: 2023-10-05
+--Licensed under the MIT License
+--Last modified: 2023-10-05
 --
--- Registrador de 32 bits com borda de subida e reset assíncrono.
+-- 32-bit register with rising edge and asynchronous reset.
 --
 ----------------------------
 library IEEE;

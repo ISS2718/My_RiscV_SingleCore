@@ -1,16 +1,16 @@
 ----------------------------
---Autor Isaac Santos Soares
+--Author Isaac Santos Soares
 --nUSP 12751713
 --
 --Copyright (c) 2024 Isaac Soares
---Licenciado sob a Licença MIT
---Última modificação: 2023-10-05
+--Licensed under the MIT License
+--Last modified: 2023-10-05
 --
---Um multiplixador de 32bits de quatro entradas: d0; d1; d2; d3, com uma chave seletrora s.
---Se s = "00", a saída y é igual a d0.
---Se s = "01", a saída y é igual a d1.
---Se s = "10", a saída y é igual a d2.
---Se s = "11", a saída y é igual a d3.
+--A 32-bit four-input multiplexer: d0; d1; d2; d3, with a selector switch s.
+--If s = "00", the output y is equal to d0.
+--If s = "01", the output y is equal to d1.
+--If s = "10", the output y is equal to d2.
+--If s = "11", the output y is equal to d3.
 --
 ----------------------------
 library IEEE;
