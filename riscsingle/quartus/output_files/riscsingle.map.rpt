@@ -1,5 +1,5 @@
 Analysis & Synthesis report for riscsingle
-Sun Oct  6 01:25:44 2024
+Wed Oct  9 23:00:47 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -14,8 +14,8 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |adder
- 10. Parameter Settings for User Entity Instance: LPM_ADD_SUB:adder_inst
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |alu
  11. Post-Synthesis Netlist Statistics for Top Partition
  12. Elapsed Time Per Partition
  13. Analysis & Synthesis Messages
@@ -45,16 +45,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct  6 01:25:44 2024          ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct  9 23:00:47 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; riscsingle                                     ;
-; Top-level Entity Name              ; adder                                          ;
+; Top-level Entity Name              ; alu                                            ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 34                                             ;
-;     Total combinational functions  ; 34                                             ;
+; Total logic elements               ; 65                                             ;
+;     Total combinational functions  ; 65                                             ;
 ;     Dedicated logic registers      ; 0                                              ;
 ; Total registers                    ; 0                                              ;
-; Total pins                         ; 98                                             ;
+; Total pins                         ; 100                                            ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -70,9 +70,11 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                            ; adder              ; riscsingle         ;
+; Top-level entity name                                            ; alu                ; riscsingle         ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Maximum processors allowed for parallel compilation              ; 4                  ;                    ;
+; VHDL Show LMF Mapping Messages                                   ; Off                ;                    ;
+; VHDL Version                                                     ; VHDL_2008          ; VHDL_1993          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                      ; Off                ; Off                ;
@@ -81,7 +83,6 @@ https://fpgasoftware.intel.com/eula.
 ; Preserve fewer node names                                        ; On                 ; On                 ;
 ; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
 ; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
 ; State Machine Processing                                         ; Auto               ; Auto               ;
 ; Safe State Machine                                               ; Off                ; Off                ;
 ; Extract Verilog State Machines                                   ; On                 ; On                 ;
@@ -167,64 +168,54 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                     ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+---------+
-; ../src/adder.vhdl                ; yes             ; User VHDL File               ; C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/adder.vhdl             ;         ;
-; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_add_sub.tdf                        ;         ;
-; addcore.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/addcore.inc                            ;         ;
-; look_add.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/look_add.inc                           ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/bypassff.inc                           ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altshift.inc                           ;         ;
-; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                ;         ;
-; aglobal231.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc                         ;         ;
-; db/add_sub_bhg.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/quartus/db/add_sub_bhg.tdf ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                       ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
+; ../src/alu.vhdl                  ; yes             ; User VHDL File  ; C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/alu.vhdl ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                     ;
-+---------------------------------------------+-------------------------------------------------------------------+
-; Resource                                    ; Usage                                                             ;
-+---------------------------------------------+-------------------------------------------------------------------+
-; Estimated Total logic elements              ; 34                                                                ;
-;                                             ;                                                                   ;
-; Total combinational functions               ; 34                                                                ;
-; Logic element usage by number of LUT inputs ;                                                                   ;
-;     -- 4 input functions                    ; 0                                                                 ;
-;     -- 3 input functions                    ; 32                                                                ;
-;     -- <=2 input functions                  ; 2                                                                 ;
-;                                             ;                                                                   ;
-; Logic elements by mode                      ;                                                                   ;
-;     -- normal mode                          ; 1                                                                 ;
-;     -- arithmetic mode                      ; 33                                                                ;
-;                                             ;                                                                   ;
-; Total registers                             ; 0                                                                 ;
-;     -- Dedicated logic registers            ; 0                                                                 ;
-;     -- I/O registers                        ; 0                                                                 ;
-;                                             ;                                                                   ;
-; I/O pins                                    ; 98                                                                ;
-;                                             ;                                                                   ;
-; Embedded Multiplier 9-bit elements          ; 0                                                                 ;
-;                                             ;                                                                   ;
-; Maximum fan-out node                        ; lpm_add_sub:adder_inst|add_sub_bhg:auto_generated|result_int[1]~2 ;
-; Maximum fan-out                             ; 2                                                                 ;
-; Total fan-out                               ; 229                                                               ;
-; Average fan-out                             ; 1.00                                                              ;
-+---------------------------------------------+-------------------------------------------------------------------+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Estimated Total logic elements              ; 65                  ;
+;                                             ;                     ;
+; Total combinational functions               ; 65                  ;
+; Logic element usage by number of LUT inputs ;                     ;
+;     -- 4 input functions                    ; 33                  ;
+;     -- 3 input functions                    ; 1                   ;
+;     -- <=2 input functions                  ; 31                  ;
+;                                             ;                     ;
+; Logic elements by mode                      ;                     ;
+;     -- normal mode                          ; 65                  ;
+;     -- arithmetic mode                      ; 0                   ;
+;                                             ;                     ;
+; Total registers                             ; 0                   ;
+;     -- Dedicated logic registers            ; 0                   ;
+;     -- I/O registers                        ; 0                   ;
+;                                             ;                     ;
+; I/O pins                                    ; 100                 ;
+;                                             ;                     ;
+; Embedded Multiplier 9-bit elements          ; 0                   ;
+;                                             ;                     ;
+; Maximum fan-out node                        ; alucontrol[1]~input ;
+; Maximum fan-out                             ; 33                  ;
+; Total fan-out                               ; 329                 ;
+; Average fan-out                             ; 1.24                ;
++---------------------------------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                             ;
-+------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                      ; Entity Name ; Library Name ;
-+------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------+-------------+--------------+
-; |adder                             ; 34 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 98   ; 0            ; 0          ; |adder                                                   ; adder       ; work         ;
-;    |lpm_add_sub:adder_inst|        ; 34 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder|lpm_add_sub:adder_inst                            ; lpm_add_sub ; work         ;
-;       |add_sub_bhg:auto_generated| ; 34 (34)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |adder|lpm_add_sub:adder_inst|add_sub_bhg:auto_generated ; add_sub_bhg ; work         ;
-+------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------+-------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; |alu                       ; 65 (65)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 100  ; 0            ; 0          ; |alu                ; alu         ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -243,41 +234,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |adder ;
-+----------------+-------+----------------------------------------------+
-; Parameter Name ; Value ; Type                                         ;
-+----------------+-------+----------------------------------------------+
-; n_bits         ; 32    ; Signed Integer                               ;
-+----------------+-------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 8:1                ; 30 bits   ; 150 LEs       ; 60 LEs               ; 90 LEs                 ; No         ; |alu|Mux30                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: LPM_ADD_SUB:adder_inst ;
-+------------------------+-------------+------------------------------+
-; Parameter Name         ; Value       ; Type                         ;
-+------------------------+-------------+------------------------------+
-; LPM_WIDTH              ; 32          ; Signed Integer               ;
-; LPM_REPRESENTATION     ; SIGNED      ; Untyped                      ;
-; LPM_DIRECTION          ; ADD         ; Untyped                      ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                      ;
-; LPM_PIPELINE           ; 0           ; Signed Integer               ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                      ;
-; REGISTERED_AT_END      ; 0           ; Untyped                      ;
-; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                      ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                      ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                      ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH           ;
-; DEVICE_FAMILY          ; MAX 10      ; Untyped                      ;
-; USE_WYS                ; OFF         ; Untyped                      ;
-; STYLE                  ; FAST        ; Untyped                      ;
-; CBXI_PARAMETER         ; add_sub_bhg ; Untyped                      ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                   ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                 ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                 ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE               ;
-+------------------------+-------------+------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |alu ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; n_bits         ; 32    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -286,16 +258,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 98                          ;
-; cycloneiii_lcell_comb ; 34                          ;
-;     arith             ; 33                          ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 32                          ;
-;     normal            ; 1                           ;
+; boundary_port         ; 100                         ;
+; cycloneiii_lcell_comb ; 66                          ;
+;     normal            ; 66                          ;
 ;         0 data inputs ; 1                           ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 33                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.30                        ;
-; Average LUT depth     ; 3.09                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.98                        ;
 +-----------------------+-----------------------------+
 
 
@@ -314,49 +286,44 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Sun Oct  6 01:25:36 2024
+    Info: Processing started: Wed Oct  9 23:00:29 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off riscsingle -c riscsingle
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
+Info (12021): Found 2 design units, including 1 entities, in source file /users/isaac/onedrive/documentos/_my_projects/vhdl_study/riscsingle/src/alu.vhdl
+    Info (12022): Found design unit 1: alu-behavioral File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/alu.vhdl Line: 29
+    Info (12023): Found entity 1: alu File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/alu.vhdl Line: 16
 Info (12021): Found 4 design units, including 1 entities, in source file /users/isaac/onedrive/documentos/_my_projects/vhdl_study/riscsingle/src/adder.vhdl
     Info (12022): Found design unit 1: adder-behavioral File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/adder.vhdl Line: 37
     Info (12022): Found design unit 2: adder-efficient File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/adder.vhdl Line: 50
     Info (12022): Found design unit 3: cfg_adder File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/adder.vhdl Line: 66
     Info (12023): Found entity 1: adder File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/adder.vhdl Line: 24
 Info (12021): Found 2 design units, including 1 entities, in source file /users/isaac/onedrive/documentos/_my_projects/vhdl_study/riscsingle/src/mux4.vhdl
-    Info (12022): Found design unit 1: mux4-behavioral File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 26
+    Info (12022): Found design unit 1: mux4-behavioral File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 27
     Info (12023): Found entity 1: mux4 File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux4.vhdl Line: 19
 Info (12021): Found 2 design units, including 1 entities, in source file /users/isaac/onedrive/documentos/_my_projects/vhdl_study/riscsingle/src/flopr.vhdl
     Info (12022): Found design unit 1: flopr-behavioral File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/flopr.vhdl Line: 23
     Info (12023): Found entity 1: flopr File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/flopr.vhdl Line: 15
 Info (12021): Found 2 design units, including 1 entities, in source file /users/isaac/onedrive/documentos/_my_projects/vhdl_study/riscsingle/src/mux2.vhdl
-    Info (12022): Found design unit 1: mux2-behavioral File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux2.vhdl Line: 23
+    Info (12022): Found design unit 1: mux2-behavioral File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux2.vhdl Line: 24
     Info (12023): Found entity 1: mux2 File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux2.vhdl Line: 16
 Info (12021): Found 2 design units, including 1 entities, in source file /users/isaac/onedrive/documentos/_my_projects/vhdl_study/riscsingle/src/mux3.vhdl
-    Info (12022): Found design unit 1: mux3-behavioral File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux3.vhdl Line: 26
+    Info (12022): Found design unit 1: mux3-behavioral File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux3.vhdl Line: 27
     Info (12023): Found entity 1: mux3 File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux3.vhdl Line: 19
-Info (12127): Elaborating entity "adder" for the top level hierarchy
-Info (12128): Elaborating entity "LPM_ADD_SUB" for hierarchy "LPM_ADD_SUB:adder_inst" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/adder.vhdl Line: 52
-Info (12130): Elaborated megafunction instantiation "LPM_ADD_SUB:adder_inst" File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/adder.vhdl Line: 52
-Info (12133): Instantiated megafunction "LPM_ADD_SUB:adder_inst" with the following parameter: File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/adder.vhdl Line: 52
-    Info (12134): Parameter "LPM_WIDTH" = "32"
-    Info (12134): Parameter "LPM_DIRECTION" = "ADD"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_PIPELINE" = "0"
-    Info (12134): Parameter "LPM_TYPE" = "LPM_ADD_SUB"
-    Info (12134): Parameter "LPM_HINT" = "UNUSED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_bhg.tdf
-    Info (12023): Found entity 1: add_sub_bhg File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/quartus/db/add_sub_bhg.tdf Line: 23
-Info (12128): Elaborating entity "add_sub_bhg" for hierarchy "LPM_ADD_SUB:adder_inst|add_sub_bhg:auto_generated" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 119
+Info (12127): Elaborating entity "alu" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at alu.vhdl(46): object "two_complement" assigned a value but never read File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/alu.vhdl Line: 46
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "zero" is stuck at GND File: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/alu.vhdl Line: 25
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 132 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 65 input pins
+Info (21057): Implemented 165 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 67 input pins
     Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 34 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4806 megabytes
-    Info: Processing ended: Sun Oct  6 01:25:44 2024
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:10
+    Info (21061): Implemented 65 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4817 megabytes
+    Info: Processing ended: Wed Oct  9 23:00:47 2024
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:11
 
 

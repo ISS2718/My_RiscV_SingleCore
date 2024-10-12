@@ -23,6 +23,7 @@ entity mux3 is
     y : out std_logic_vector (31 downto 0)
   ) ;
 end mux3;
+
 architecture behavioral of mux3 is
 begin 
   with s select

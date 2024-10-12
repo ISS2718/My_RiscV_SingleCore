@@ -20,6 +20,7 @@ entity mux2 is
     y : out std_logic_vector (31 downto 0)
   ) ;
 end mux2;
+
 architecture behavioral of mux2 is
 begin 
   y <= d0 when s = '0' else d1;
