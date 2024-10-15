@@ -132,11 +132,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "alucontrol[2]",
+					"name" : "zero",
 					"strict" : false
 				},
 				{
-					"name" : "alucontrol[1]",
+					"name" : "b[0]",
 					"strict" : false
 				},
 				{
@@ -148,7 +148,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "b[0]",
+					"name" : "alucontrol[1]",
+					"strict" : false
+				},
+				{
+					"name" : "alucontrol[2]",
 					"strict" : false
 				},
 				{

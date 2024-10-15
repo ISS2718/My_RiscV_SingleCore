@@ -1,5 +1,5 @@
 Flow report for riscsingle
-Wed Oct  9 23:00:47 2024
+Tue Oct 15 16:31:36 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Wed Oct  9 23:00:47 2024          ;
+; Flow Status                        ; Successful - Tue Oct 15 16:31:36 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; riscsingle                                     ;
 ; Top-level Entity Name              ; alu                                            ;
 ; Family                             ; MAX 10                                         ;
 ; Device                             ; 10M50DAF484C7G                                 ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 65                                             ;
-;     Total combinational functions  ; 65                                             ;
+; Total logic elements               ; 76                                             ;
+;     Total combinational functions  ; 76                                             ;
 ;     Dedicated logic registers      ; 0                                              ;
 ; Total registers                    ; 0                                              ;
 ; Total pins                         ; 100                                            ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/09/2024 23:00:39 ;
+; Start date & time ; 10/15/2024 16:31:29 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; riscsingle          ;
 +-------------------+---------------------+
@@ -78,11 +78,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+--------------------------------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value                        ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+--------------------------------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589200.172852563913576         ; --                                   ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 10995770589201.172902068925572         ; --                                   ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                                   ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                                   ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                                   ; --          ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                                   ; --          ; eda_board_design_symbol           ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --                                   ; --          ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL                 ; Custom VHDL                            ; <None>                               ; --          ; --                                ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --                                   ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                                   ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                                   ; --          ; --                                ;
 ; NUM_PARALLEL_PROCESSORS             ; 4                                      ; --                                   ; --          ; --                                ;

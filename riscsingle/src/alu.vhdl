@@ -1,12 +1,16 @@
 ----------------------------
---Author Isaac Santos Soares
---nUSP 12751713
+-- Author: Isaac Santos Soares
+-- nUSP: 12751713
 --
---Copyright (c) 2024 Isaac Soares
---Licensed under the MIT License
---Last modified: 2023-10-06
+-- Copyright (c) 2024 Isaac Soares
+-- Licensed under the MIT License
+-- Last modified: 2023-10-06
 --
--- This VHDL module defines a parameterizable ALU.
+-- This VHDL module defines a parameterizable Arithmetic Logic Unit (ALU).
+-- The ALU performs a variety of arithmetic and logical operations based on 
+-- the provided opcode. Supported operations include AND, OR, ADD, SUB, and 
+-- SLT (Set Less Than). The module outputs the result of the operation and 
+-- a zero flag indicating if the result is zero.
 --
 ----------------------------
 library IEEE;
@@ -42,17 +46,15 @@ architecture behavioral of alu is
 
   function "-" (a, b : std_logic_vector) 
   return std_logic_vector is
-    variable carry : std_logic_vector(a'length - 1 downto 0);
-    variable two_complement : std_logic_vector(a'length - 1 downto 0);
+    variable carry : std_logic;
     variable sub : std_logic_vector(a'length - 1 downto 0);
   begin
-    carry := (0 => '1', others => '0');
-    two_complement := not b;
+    carry := '1';
     for i in 0 to n_bits - 1 loop
       if i = 0 then
-        sub(i) := a(i) XOR b(i) XOR carry(i);
+        sub(i) := a(i) XOR (NOT b(i)) XOR carry;
       else
-        sub(i) := a(i) XOR b(i);
+        sub(i) := a(i) XOR (NOT b(i));
       end if;
       -- carry(i+1) <= (a(i) AND b(i)) OR (a(i) AND carry(i)) OR (b(i) AND carry(i));
     end loop;
@@ -73,16 +75,13 @@ architecture behavioral of alu is
     end if;
   end function;
 
-  function itzero(a : std_logic_vector) return std_logic is
-    variable result : std_logic;
+  function nor_reduce (a : std_logic_vector) return std_logic is
+    variable result : std_logic := '0';
   begin
-    for i in a'range loop
-      if a(i) /= '0' then
-        result := '0';
-        exit;
-      end if;
+    for i in 0 to n_bits - 1 loop
+      result := result OR a(i);
     end loop;
-    return result;
+    return not result;
   end function;
 
   signal res : std_logic_vector(n_bits-1 downto 0);
@@ -97,5 +96,5 @@ begin
       (others => '0') when others;
 
   result <= res;
-  zero <= itzero(res);
+  zero <= nor_reduce(res);
 end behavioral;

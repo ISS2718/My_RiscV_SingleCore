@@ -8,108 +8,194 @@ z2
 !i10f 100
 cModel Technology
 dC:/intelFPGA/18.1
+Eadder
+Z0 w1729009909
+Z1 DPx3 lpm 14 lpm_components 0 22 BZZBj]8LhndN7CkCjD@L`2
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/modelsim
+Z5 8C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/adder.vhdl
+Z6 FC:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/adder.vhdl
+l0
+L24
+V1TRn4_Md[JBRQM>ZI<7X83
+!s100 J?]YYMPZIlcgLY>B]THh62
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1729009925
+!i10b 1
+Z9 !s108 1729009925.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/adder.vhdl|
+Z11 !s107 C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/adder.vhdl|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Aefficient
+R1
+R2
+R3
+Z14 DEx4 work 5 adder 0 22 1TRn4_Md[JBRQM>ZI<7X83
+l51
+L50
+V]m`PINS4G^PF06Y7LI;4A2
+!s100 @n^?2INg6n=8ldX5eQzeK1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+R14
+l39
+L37
+V7iWlILDTz]86@zOO>]gLj0
+!s100 SF;QkDc4Jzg11gz3?T4Hz3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ccfg_adder
+eadder
+abehavioral
+DAx4 work 5 adder 10 behavioral 22 7iWlILDTz]86@zOO>]gLj0
+R1
+R2
+R3
+R14
+R0
+R4
+R5
+R6
+l0
+L66
+V8CA<dJ]JGY>gdQaDdH?RT3
+!s100 W0<=a4T0Y6I5YDc3>^ozf2
+R7
+32
+R8
+!i10b 0
+R9
+R10
+R11
+!i113 1
+R12
+R13
 Eflopr
-Z0 w1726595114
-Z1 dC:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/modelsim
-Z2 8C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/flopr.vhdl
-Z3 FC:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/flopr.vhdl
+Z15 w1726595114
+R4
+Z16 8C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/flopr.vhdl
+Z17 FC:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/flopr.vhdl
 l0
 L12
 VY@H@n9_jD@F=kHXhOd;Xm0
 !s100 eAXcnEz:1WXJgiK4YFmND0
-Z4 OV;C;10.5b;63
+R7
 32
-Z5 !s110 1726595119
+Z18 !s110 1726595119
 !i10b 1
-Z6 !s108 1726595119.000000
-Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/flopr.vhdl|
-Z8 !s107 C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/flopr.vhdl|
+Z19 !s108 1726595119.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/flopr.vhdl|
+Z21 !s107 C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/flopr.vhdl|
 !i113 1
-Z9 o-work work -2002 -explicit
-Z10 tExplicit 1 CvgOpt 0
+R12
+R13
 Abehavioral
 DEx4 work 5 flopr 0 22 Y@H@n9_jD@F=kHXhOd;Xm0
 l20
 L19
 VbSM6jo[3T[L`lba02AkJV0
 !s100 Vg^ZZQ:;Y?gOM3^8o>RT72
-R4
-32
-R5
-!i10b 1
-R6
 R7
-R8
+32
+R18
+!i10b 1
+R19
+R20
+R21
 !i113 1
-R9
-R10
+R12
+R13
 Emux2
-Z11 w1725989196
-R1
-Z12 8C:\Users\isaac\OneDrive\Documentos\_My_Projects\VHDL_Study\riscsingle\src\mux2.vhdl
-Z13 FC:\Users\isaac\OneDrive\Documentos\_My_Projects\VHDL_Study\riscsingle\src\mux2.vhdl
+Z22 w1725989196
+R4
+Z23 8C:\Users\isaac\OneDrive\Documentos\_My_Projects\VHDL_Study\riscsingle\src\mux2.vhdl
+Z24 FC:\Users\isaac\OneDrive\Documentos\_My_Projects\VHDL_Study\riscsingle\src\mux2.vhdl
 l0
 L14
 VlX0J;;6HC?65YXl2VB0RI2
 !s100 Y:]_42i0RS^mo;5?U<dkU1
-R4
+R7
 32
-Z14 !s110 1725991661
+Z25 !s110 1725991661
 !i10b 1
-Z15 !s108 1725991661.000000
-Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\isaac\OneDrive\Documentos\_My_Projects\VHDL_Study\riscsingle\src\mux2.vhdl|
-Z17 !s107 C:\Users\isaac\OneDrive\Documentos\_My_Projects\VHDL_Study\riscsingle\src\mux2.vhdl|
+Z26 !s108 1725991661.000000
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\isaac\OneDrive\Documentos\_My_Projects\VHDL_Study\riscsingle\src\mux2.vhdl|
+Z28 !s107 C:\Users\isaac\OneDrive\Documentos\_My_Projects\VHDL_Study\riscsingle\src\mux2.vhdl|
 !i113 1
-R9
-R10
+R12
+R13
 Abehavioral
 DEx4 work 4 mux2 0 22 lX0J;;6HC?65YXl2VB0RI2
 l22
 L20
 VRHH[dGazf83<nMO1@1LbC2
 !s100 HDF2lboC=Fa3?Z435e2GF2
-R4
+R7
 32
-R14
+R25
 !i10b 1
-R15
-R16
-R17
+R26
+R27
+R28
 !i113 1
-R9
-R10
+R12
+R13
 Emux3
-Z18 w1725989467
-R1
-Z19 8C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux3.vhdl
-Z20 FC:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux3.vhdl
+Z29 w1725989467
+R4
+Z30 8C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux3.vhdl
+Z31 FC:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux3.vhdl
 l0
 L14
 V];:zngS9B1Tn@7fC8Do=n0
 !s100 F7d6?3_?;W:<NL8`@]4L`1
-R4
+R7
 32
-R14
+R25
 !i10b 1
-R15
-Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux3.vhdl|
-Z22 !s107 C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux3.vhdl|
+R26
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux3.vhdl|
+Z33 !s107 C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux3.vhdl|
 !i113 1
-R9
-R10
+R12
+R13
 Abehavioral
 DEx4 work 4 mux3 0 22 ];:zngS9B1Tn@7fC8Do=n0
 l22
 L21
 V]90@FP=<2;Zj`RHOP1:242
 !s100 a[<bIRX:62i]iCzlz@`ME1
-R4
+R7
 32
-R14
+R25
 !i10b 1
-R15
-R21
-R22
+R26
+R32
+R33
 !i113 1
-R9
-R10
+R12
+R13

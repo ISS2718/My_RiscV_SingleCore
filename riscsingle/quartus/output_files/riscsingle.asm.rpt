@@ -1,5 +1,5 @@
 Assembler report for riscsingle
-Sun Oct  6 01:25:54 2024
+Tue Oct 15 13:49:55 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -38,9 +38,9 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Oct  6 01:25:54 2024 ;
+; Assembler Status      ; Successful - Tue Oct 15 13:49:55 2024 ;
 ; Revision Name         ; riscsingle                            ;
-; Top-level Entity Name ; adder                                 ;
+; Top-level Entity Name ; alu                                   ;
 ; Family                ; MAX 10                                ;
 ; Device                ; 10M50DAF484C7G                        ;
 +-----------------------+---------------------------------------+
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+--------------------------------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                                            ;
 +----------------+--------------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x0027A756                                                                                                         ;
-; Checksum       ; 0x0027A756                                                                                                         ;
+; JTAG usercode  ; 0x0027C071                                                                                                         ;
+; Checksum       ; 0x0027C071                                                                                                         ;
 +----------------+--------------------------------------------------------------------------------------------------------------------+
 
 
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Sun Oct  6 01:25:52 2024
+    Info: Processing started: Tue Oct 15 13:49:42 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off riscsingle -c riscsingle
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
-Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4728 megabytes
-    Info: Processing ended: Sun Oct  6 01:25:54 2024
-    Info: Elapsed time: 00:00:02
+Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4739 megabytes
+    Info: Processing ended: Tue Oct 15 13:49:55 2024
+    Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:02
 
 

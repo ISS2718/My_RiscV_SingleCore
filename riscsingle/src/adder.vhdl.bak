@@ -67,28 +67,3 @@ configuration cfg_adder of adder is
   for behavioral
   end for;
 end cfg_adder;
-
-package Operadores is
-  function "+" (a, b : std_logic_vector) return std_logic_vector;
-end package Operadores;
-
-package body Operadores is
-  function "+" (a, b : std_logic_vector) return std_logic_vector is
-    signal resultado : std_logic_vector(a'length-1 downto 0);
-    signal c_out : std_logic;
-    component adder
-      generic (n_bits : integer := 32);
-      port (
-        a : in std_logic_vector(n_bits-1 downto 0);
-        b : in std_logic_vector(n_bits-1 downto 0);
-        c_in : in std_logic;
-        y : out std_logic_vector(n_bits-1 downto 0);
-        c_out : out std_logic
-      );
-    end component;
-  begin
-    U1: adder generic map (n_bits => a'length)
-      port map (a => a, b => b, c_in => '0', y => resultado, c_out => c_out);
-    return resultado;
-  end function "+";
-end package body Operadores;
