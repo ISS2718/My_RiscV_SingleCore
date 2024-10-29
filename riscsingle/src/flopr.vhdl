@@ -4,7 +4,7 @@
 --
 --Copyright (c) 2024 Isaac Soares
 --Licensed under the MIT License
---Last modified: 2023-10-05
+--Last modified: 2024-10-29
 --
 -- 32-bit register with rising edge and asynchronous reset.
 --
@@ -13,9 +13,12 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity flopr is
+  generic(
+    Width : integer := 32
+  );
   port (
-    d : in std_logic_vector (31 downto 0);
-    q : out std_logic_vector (31 downto 0);
+    d : in std_logic_vector (Width-1 downto 0);
+    q : out std_logic_vector (Width-1 downto 0);
     clk, reset : in std_logic
   );
 end flopr;

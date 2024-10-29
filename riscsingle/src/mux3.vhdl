@@ -4,7 +4,7 @@
 --
 --Copyright (c) 2024 Isaac Soares
 --Licensed under the MIT License
---Last modified: 2023-10-05
+--Last modified: 2024-10-29
 --
 --A 32-bit three-input multiplexer: d0; d1; d2, with a selector switch s.
 --If s = "00", the output y is equal to d0.
@@ -17,11 +17,14 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity mux3 is
+  generic(
+    Width : integer := 32
+  );
   port (
-    d0, d1, d2 : in std_logic_vector (31 downto 0);
+    d0, d1, d2 : in std_logic_vector (Width-1 downto 0);
     s : in std_logic_vector (1 downto 0);
-    y : out std_logic_vector (31 downto 0)
-  ) ;
+    y : out std_logic_vector (Width-1 downto 0)
+  );
 end mux3;
 
 architecture behavioral of mux3 is
