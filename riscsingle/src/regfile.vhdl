@@ -1,6 +1,6 @@
 ----------------------------
 -- Authores: Isaac Santos Soares; Guilherme Mendonca Gregorio; Mateus Santos Messias
--- nUSP: 12751713; 12688511; 
+-- nUSP: 12751713; 12688511; 12548000
 --
 -- Copyright (c) 2024 Isaac Soares
 -- Licensed under the MIT License
@@ -34,34 +34,17 @@ end regfile;
 
 architecture behavioral of regfile is
   type reg_array is array (0 to 31) of std_logic_vector(Width-1 downto 0);  -- 32 registers array
-  signal read_data : reg_array := (others => (others => '0'));  -- Initialize registers to zero
-  signal write_data : reg_array := (others => (others => '0'));  -- Signal for write data
+  signal reg_data : reg_array := (others => (others => '0'));  -- Signal for write data
 begin
   process(clk)
   begin
     if rising_edge(clk) then
       if we = '1' then  -- Check if write is enabled
-        write_data(to_integer(a3)) <= wd;  -- Capture write data
-      else
-        for i in 0 to Width-1 loop
-          write_data(i) <= read_data(i);
-        end loop;
+      reg_data(to_integer(a3)) <= wd;  -- Capture write data
       end if;
     end if;
   end process;
 
-  -- Generate flip-flops for each register
-  gen_flopr: for i in 0 to 31 generate
-    flopr_inst: entity work.flopr
-      generic map (Width => Width)
-      port map (
-        d => write_data(i),  -- Flip-flop input data
-        q => read_data(i),  -- Flip-flop output data
-        clk => clk,  -- Clock signal
-        reset => '0'  -- Reset signal (assumed unused)
-      );
-  end generate gen_flopr;
-
-  rd1 <= read_data(to_integer(a1));  -- Read from register a1
-  rd2 <= read_data(to_integer(a2));  -- Read from register a2
+  rd1 <= reg_data(to_integer(a1));  -- Read from register a1
+  rd2 <= reg_data(to_integer(a2));  -- Read from register a2
 end behavioral;
