@@ -1,5 +1,5 @@
 ----------------------------
--- Authores: Isaac Santos Soares; Guilherme Mendonca Gregorio; Mateus Santos Messias
+-- Authors: Isaac Santos Soares; Guilherme Mendonca Gregorio; Mateus Santos Messias
 -- nUSP: 12751713; 12688511; 12548000
 --
 -- Copyright (c) 2024 Isaac Soares
@@ -40,7 +40,7 @@ begin
   begin
     if rising_edge(clk) then
       if we = '1' then  -- Check if write is enabled
-      reg_data(to_integer(a3)) <= wd;  -- Capture write data
+        reg_data(to_integer(a3)) <= wd;  -- Capture write data
       end if;
     end if;
   end process;

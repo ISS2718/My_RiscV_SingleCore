@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Nov  5 12:38:24 2024
+Analysis & Synthesis Status : Successful - Tue Nov  5 16:56:14 2024
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : riscsingle
-Top-level Entity Name : regfile
+Top-level Entity Name : extend
 Family : MAX 10
-Total logic elements : 3,440
-    Total combinational functions : 2,416
-    Dedicated logic registers : 2,048
-Total registers : 2048
-Total pins : 113
+Total logic elements : 15
+    Total combinational functions : 15
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 59
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

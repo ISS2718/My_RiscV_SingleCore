@@ -1,6 +1,6 @@
 ----------------------------
--- Authores: Isaac Santos Soares; Guilherme Mendonca Gregorio; Mateus Santos Messias
--- nUSP: 12751713; 12688511; 
+-- Authors: Isaac Santos Soares; Guilherme Mendonca Gregorio; Mateus Santos Messias
+-- nUSP: 12751713; 12688511; 12548000
 --
 -- Copyright (c) 2024 Isaac Soares
 -- Licensed under the MIT License
@@ -13,6 +13,7 @@
 -- - adder: Adder
 -- - alu: Arithmetic Logic Unit (ALU)
 -- - regfile: Register file
+-- - extend: Extends immediate values from RISC-V instructions
 --
 -- This package includes the following functions:
 -- - "+" (addition)
@@ -25,7 +26,7 @@
 ----------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;  -- Adicionando a biblioteca necessária
+use IEEE.NUMERIC_STD.ALL;
 
 -- Package riscv_pkg that contains constants, components, and functions
 package riscv_pkg is
@@ -110,6 +111,15 @@ package riscv_pkg is
     );
   end component;
 
+  -- Component extend: Extends immediate values from RISC-V instructions
+  component extend is
+    port (
+      immsrc : in std_logic_vector(1 downto 0);
+      instr : in std_logic_vector(31 downto 7);
+      immext : out std_logic_vector(31 downto 0)
+    );
+  end component;
+
   -- Function to overload the addition operator for std_logic_vector
   function "+" (a, b : std_logic_vector) return std_logic_vector;
   
@@ -180,9 +190,15 @@ package body riscv_pkg is
     return not result;  -- Return the NOR of all bits
   end function;
 
-  -- Function to convert std_logic_vector to integer
+  -- Function to convert std_logic_vector to integer using power of two
   function to_integer(a : std_logic_vector) return integer is
+    variable result : integer := 0;
   begin
-    return to_integer(unsigned(a));
+    for i in 0 to a'length-1 loop
+      if a(i) = '1' then
+        result := result + 2**i;  -- Add the corresponding power of 2
+      end if;
+    end loop;
+    return result;
   end function;
 end package body riscv_pkg;
