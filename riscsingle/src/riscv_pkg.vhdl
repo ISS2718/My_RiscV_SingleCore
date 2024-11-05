@@ -1,6 +1,6 @@
 ----------------------------
--- Author: Isaac Santos Soares
--- nUSP: 12751713
+-- Authores: Isaac Santos Soares; Guilherme Mendonca Gregorio; Mateus Santos Messias
+-- nUSP: 12751713; 12688511; 
 --
 -- Copyright (c) 2024 Isaac Soares
 -- Licensed under the MIT License
@@ -12,17 +12,20 @@
 -- - flopr: Flip-flop with reset
 -- - adder: Adder
 -- - alu: Arithmetic Logic Unit (ALU)
+-- - regfile: Register file
 --
 -- This package includes the following functions:
 -- - "+" (addition)
 -- - "-" (subtraction)
 -- - "<" (less than comparison)
 -- - nor_reduce (NOR reduction)
+-- - to_integer (conversion to integer)
 --
--- Last Modified: 2024-10-29
+-- Last Modified: 2024-11-05
 ----------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;  -- Adicionando a biblioteca necessária
 
 -- Package riscv_pkg that contains constants, components, and functions
 package riscv_pkg is
@@ -93,6 +96,20 @@ package riscv_pkg is
     );
   end component;
 
+  -- Component regfile: Register file
+  component regfile is
+    generic(
+      Width : integer := 32  -- Largura dos registradores
+    );
+    port(
+      clk : in std_logic;  -- Sinal de clock
+      we : in std_logic;  -- Sinal de habilitação de escrita
+      a1, a2, a3 : in std_logic_vector(4 downto 0);  -- Endereços dos registradores
+      wd : in std_logic_vector(Width-1 downto 0);  -- Dados a serem escritos
+      rd1, rd2 : out std_logic_vector(Width-1 downto 0)  -- Dados lidos
+    );
+  end component;
+
   -- Function to overload the addition operator for std_logic_vector
   function "+" (a, b : std_logic_vector) return std_logic_vector;
   
@@ -104,6 +121,9 @@ package riscv_pkg is
   
   -- Function to perform the NOR reduction operation on a std_logic_vector
   function nor_reduce (a : std_logic_vector) return std_logic;
+
+  -- Function to convert a std_logic_vector to an integer
+  function to_integer (a : std_logic_vector) return integer;
 end package riscv_pkg;
 
 -- Body of the package riscv_pkg
@@ -158,5 +178,11 @@ package body riscv_pkg is
       result := result OR a(i);  -- Bitwise OR
     end loop;
     return not result;  -- Return the NOR of all bits
+  end function;
+
+  -- Function to convert std_logic_vector to integer
+  function to_integer(a : std_logic_vector) return integer is
+  begin
+    return to_integer(unsigned(a));
   end function;
 end package body riscv_pkg;
