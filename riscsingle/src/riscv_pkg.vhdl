@@ -22,7 +22,7 @@
 -- - nor_reduce (NOR reduction)
 -- - to_integer (conversion to integer)
 --
--- Last Modified: 2024-11-05
+-- Last Modified: 2024-11-12
 ----------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -100,14 +100,14 @@ package riscv_pkg is
   -- Component regfile: Register file
   component regfile is
     generic(
-      Width : integer := 32  -- Largura dos registradores
+      Width : integer := 32  -- Register width
     );
     port(
-      clk : in std_logic;  -- Sinal de clock
-      we : in std_logic;  -- Sinal de habilitação de escrita
-      a1, a2, a3 : in std_logic_vector(4 downto 0);  -- Endereços dos registradores
-      wd : in std_logic_vector(Width-1 downto 0);  -- Dados a serem escritos
-      rd1, rd2 : out std_logic_vector(Width-1 downto 0)  -- Dados lidos
+      clk : in std_logic;  -- Clock signal
+      we : in std_logic;  -- Write enable signal
+      a1, a2, a3 : in std_logic_vector(4 downto 0);  -- Register addresses
+      wd : in std_logic_vector(Width-1 downto 0);  -- Data to be written
+      rd1, rd2 : out std_logic_vector(Width-1 downto 0)  -- Data read
     );
   end component;
 
@@ -117,6 +117,17 @@ package riscv_pkg is
       immsrc : in std_logic_vector(1 downto 0);
       instr : in std_logic_vector(31 downto 7);
       immext : out std_logic_vector(31 downto 0)
+    );
+  end component;
+
+  -- Component auludec: ALU control decoder
+  component auludec is
+    port (
+      aluop : in std_logic_vector(1 downto 0);
+      funct3 : in std_logic_vector(2 downto 0);
+      opb5 : in std_logic;
+      funct7b5 : in std_logic;
+      ALUControl : out std_logic_vector(3 downto 0)
     );
   end component;
 
