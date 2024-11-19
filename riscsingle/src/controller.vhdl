@@ -6,6 +6,9 @@
 -- Licensed under the MIT License
 -- 
 -- Description:
+-- This module decodes the main control signals based on the opcode field
+-- of the RISC-V instruction. The control signals are output as a 1-bit signal
+-- or a 2-bit signal.
 --
 -- Last Modified: 2024-11-19
 ----------------------------
