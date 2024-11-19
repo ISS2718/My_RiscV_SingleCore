@@ -17,7 +17,7 @@
 ----------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use work.riscv_pkg.all;
+use work.riscv_pkg.ALL;
 
 entity regfile is
   generic(

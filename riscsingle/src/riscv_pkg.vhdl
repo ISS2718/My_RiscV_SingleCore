@@ -14,6 +14,8 @@
 -- - alu: Arithmetic Logic Unit (ALU)
 -- - regfile: Register file
 -- - extend: Extends immediate values from RISC-V instructions
+-- - aludec: ALU control decoder
+-- - maindec: Main control decoder
 --
 -- This package includes the following functions:
 -- - "+" (addition)
@@ -120,14 +122,22 @@ package riscv_pkg is
     );
   end component;
 
-  -- Component auludec: ALU control decoder
-  component auludec is
+  -- Component aludec: ALU control decoder
+  component aludec is
     port (
       aluop : in std_logic_vector(1 downto 0);
-      funct3 : in std_logic_vector(2 downto 0);
       opb5 : in std_logic;
+      funct3 : in std_logic_vector(2 downto 0);
       funct7b5 : in std_logic;
-      ALUControl : out std_logic_vector(3 downto 0)
+      ALUControl : out std_logic_vector(2 downto 0)
+    );
+  end component;
+
+  component maindec is
+    port (
+      opcode : in std_logic_vector(6 downto 0);
+      aluop, immsrc, resultsrc : out std_logic_vector(1 downto 0);
+      alusrc, branch, jump, memwrite, regwrite : out std_logic
     );
   end component;
 
