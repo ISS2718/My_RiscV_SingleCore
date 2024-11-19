@@ -38,27 +38,25 @@ architecture behavioral of controller is
   signal branch, jump : std_logic;
   alias opb5 is opcode(5);
 begin
-  mdec : maindec
-    port map (
-      opcode => opcode,
-      aluop => aluop,
-      immsrc => immsrc,
-      resultsrc => resultsrc,
-      alusrc => alusrc,
-      branch => branch,
-      jump => jump,
-      memwrite => memwrite,
-      regwrite => regwrite
-    );
+  mdec : maindec port map (
+    opcode => opcode,
+    aluop => aluop,
+    immsrc => immsrc,
+    resultsrc => resultsrc,
+    alusrc => alusrc,
+    branch => branch,
+    jump => jump,
+    memwrite => memwrite,
+    regwrite => regwrite
+  );
     
-  adec : aludec
-    port map (
-      aluop => aluop,
-      opb5 => opb5,
-      funct3 => funct3,
-      funct7b5 => funct7b5,
-      ALUControl => alucontrol
-    );
+  adec : aludec port map (
+    aluop => aluop,
+    opb5 => opb5,
+    funct3 => funct3,
+    funct7b5 => funct7b5,
+    ALUControl => alucontrol
+  );
 
   pcsrc <=(zero and branch) or jump;
 end behavioral;
