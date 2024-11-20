@@ -33,6 +33,7 @@ entity datapath is
     zero: out STD_LOGIC
   ) ;
 end datapath;
+
 architecture behavioral of datapath is
   -- PC Signals
   signal pcnext, pcplus4, pctarget : STD_LOGIC_VECTOR(Width-1 downto 0);

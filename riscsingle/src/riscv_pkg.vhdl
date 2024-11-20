@@ -16,6 +16,7 @@
 -- - extend: Extends immediate values from RISC-V instructions
 -- - aludec: ALU control decoder
 -- - maindec: Main control decoder
+-- - datapath: Data path of the RISC-V processor
 --
 -- This package includes the following functions:
 -- - "+" (addition)
@@ -139,6 +140,28 @@ package riscv_pkg is
       aluop, immsrc, resultsrc : out std_logic_vector(1 downto 0);
       alusrc, branch, jump, memwrite, regwrite : out std_logic
     );
+  end component;
+
+  -- Component datapath: Data path of the RISC-V processor
+  component datapath is
+    generic(
+      Width : integer := 32  -- Register width
+    );
+    port (
+      clk, reset : in std_logic;  -- Clock signal
+      resultsrc : in STD_LOGIC_VECTOR(1 downto 0);
+      pcsrc, alusrc : in STD_LOGIC;
+      regwrite: in STD_LOGIC;
+      immsrc : in STD_LOGIC_VECTOR(1 downto 0);
+      alucontrol : in STD_LOGIC_VECTOR(2 downto 0);
+      instr : in STD_LOGIC_VECTOR(Width-1 downto 0);
+      readdata : in STD_LOGIC_VECTOR(Width-1 downto 0);
+      
+      aluresult, writedata : buffer STD_LOGIC_VECTOR(Width-1 downto 0);
+      pc: buffer STD_LOGIC_VECTOR(Width-1 downto 0);
+  
+      zero: out STD_LOGIC
+    ) ;
   end component;
 
   -- Function to overload the addition operator for std_logic_vector
