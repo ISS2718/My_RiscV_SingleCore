@@ -6,6 +6,15 @@
 -- Licensed under the MIT License
 -- 
 -- Description:
+-- This component is the data path of the RISC-V processor.
+-- It includes the following components: 
+-- - flopr: Flip-flop with reset
+-- - adder: Adder
+-- - extend: Extends immediate values from RISC-V instructions
+-- - regfile: Register file
+-- - alu: Arithmetic Logic Unit (ALU)
+-- - mux2: 2-input multiplexer
+-- - mux3: 3-input multiplexer
 --
 -- Last Modified: 2024-11-19
 ----------------------------
