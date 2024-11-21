@@ -28,30 +28,29 @@ entity datapath is
   );
   port (
     clk, reset : in std_logic;  -- Clock signal
-    resultsrc : in STD_LOGIC_VECTOR(1 downto 0);
-		pcsrc, alusrc : in STD_LOGIC;
-		regwrite: in STD_LOGIC;
-		immsrc : in STD_LOGIC_VECTOR(1 downto 0);
-		alucontrol : in STD_LOGIC_VECTOR(2 downto 0);
-		instr : in STD_LOGIC_VECTOR(Width-1 downto 0);
-		readdata : in STD_LOGIC_VECTOR(Width-1 downto 0);
+    resultsrc : in std_logic_vector(1 downto 0);
+		pcsrc, alusrc : in std_logic;
+		regwrite: in std_logic;
+		immsrc : in std_logic_vector(1 downto 0);
+		alucontrol : in std_logic_vector(2 downto 0);
+		instr : in std_logic_vector(Width-1 downto 0);
+		readdata : in std_logic_vector(Width-1 downto 0);
 		
-		aluresult, writedata : buffer STD_LOGIC_VECTOR(Width-1 downto 0);
-		pc: buffer STD_LOGIC_VECTOR(Width-1 downto 0);
+		aluresult, pc, writedata : buffer std_logic_vector(Width-1 downto 0);
 
-    zero: out STD_LOGIC
+    zero : out std_logic
   ) ;
 end datapath;
 
 architecture behavioral of datapath is
   -- PC Signals
-  signal pcnext, pcplus4, pctarget : STD_LOGIC_VECTOR(Width-1 downto 0);
+  signal pcnext, pcplus4, pctarget : std_logic_vector(Width-1 downto 0);
   -- Extend Signal
-  signal immext : STD_LOGIC_VECTOR(Width-1 downto 0);
+  signal immext : std_logic_vector(Width-1 downto 0);
   -- Register File Signals
-  signal srca : STD_LOGIC_VECTOR(Width-1 downto 0);
+  signal srca : std_logic_vector(Width-1 downto 0);
   -- ALU Signals
-  signal result, srcb : STD_LOGIC_VECTOR(Width-1 downto 0);
+  signal result, srcb : std_logic_vector(Width-1 downto 0);
 begin
   -- PC Next logic
   pcreg : flopr generic map(Width) port map (
