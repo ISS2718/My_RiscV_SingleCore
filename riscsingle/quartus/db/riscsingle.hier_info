@@ -1,4 +1,273 @@
-|datapath
+|riscvsingle
+clk => datapath:dp.clk
+reset => datapath:dp.reset
+PC[0] <= datapath:dp.pc[0]
+PC[1] <= datapath:dp.pc[1]
+PC[2] <= datapath:dp.pc[2]
+PC[3] <= datapath:dp.pc[3]
+PC[4] <= datapath:dp.pc[4]
+PC[5] <= datapath:dp.pc[5]
+PC[6] <= datapath:dp.pc[6]
+PC[7] <= datapath:dp.pc[7]
+PC[8] <= datapath:dp.pc[8]
+PC[9] <= datapath:dp.pc[9]
+PC[10] <= datapath:dp.pc[10]
+PC[11] <= datapath:dp.pc[11]
+PC[12] <= datapath:dp.pc[12]
+PC[13] <= datapath:dp.pc[13]
+PC[14] <= datapath:dp.pc[14]
+PC[15] <= datapath:dp.pc[15]
+PC[16] <= datapath:dp.pc[16]
+PC[17] <= datapath:dp.pc[17]
+PC[18] <= datapath:dp.pc[18]
+PC[19] <= datapath:dp.pc[19]
+PC[20] <= datapath:dp.pc[20]
+PC[21] <= datapath:dp.pc[21]
+PC[22] <= datapath:dp.pc[22]
+PC[23] <= datapath:dp.pc[23]
+PC[24] <= datapath:dp.pc[24]
+PC[25] <= datapath:dp.pc[25]
+PC[26] <= datapath:dp.pc[26]
+PC[27] <= datapath:dp.pc[27]
+PC[28] <= datapath:dp.pc[28]
+PC[29] <= datapath:dp.pc[29]
+PC[30] <= datapath:dp.pc[30]
+PC[31] <= datapath:dp.pc[31]
+Instr[0] => controller:c.opcode[0]
+Instr[0] => datapath:dp.instr[0]
+Instr[1] => controller:c.opcode[1]
+Instr[1] => datapath:dp.instr[1]
+Instr[2] => controller:c.opcode[2]
+Instr[2] => datapath:dp.instr[2]
+Instr[3] => controller:c.opcode[3]
+Instr[3] => datapath:dp.instr[3]
+Instr[4] => controller:c.opcode[4]
+Instr[4] => datapath:dp.instr[4]
+Instr[5] => controller:c.opcode[5]
+Instr[5] => datapath:dp.instr[5]
+Instr[6] => controller:c.opcode[6]
+Instr[6] => datapath:dp.instr[6]
+Instr[7] => datapath:dp.instr[7]
+Instr[8] => datapath:dp.instr[8]
+Instr[9] => datapath:dp.instr[9]
+Instr[10] => datapath:dp.instr[10]
+Instr[11] => datapath:dp.instr[11]
+Instr[12] => controller:c.funct3[0]
+Instr[12] => datapath:dp.instr[12]
+Instr[13] => controller:c.funct3[1]
+Instr[13] => datapath:dp.instr[13]
+Instr[14] => controller:c.funct3[2]
+Instr[14] => datapath:dp.instr[14]
+Instr[15] => datapath:dp.instr[15]
+Instr[16] => datapath:dp.instr[16]
+Instr[17] => datapath:dp.instr[17]
+Instr[18] => datapath:dp.instr[18]
+Instr[19] => datapath:dp.instr[19]
+Instr[20] => datapath:dp.instr[20]
+Instr[21] => datapath:dp.instr[21]
+Instr[22] => datapath:dp.instr[22]
+Instr[23] => datapath:dp.instr[23]
+Instr[24] => datapath:dp.instr[24]
+Instr[25] => datapath:dp.instr[25]
+Instr[26] => datapath:dp.instr[26]
+Instr[27] => datapath:dp.instr[27]
+Instr[28] => datapath:dp.instr[28]
+Instr[29] => datapath:dp.instr[29]
+Instr[30] => controller:c.funct7b5
+Instr[30] => datapath:dp.instr[30]
+Instr[31] => datapath:dp.instr[31]
+MemWrite <= controller:c.memwrite
+ALUResult[0] <= datapath:dp.aluresult[0]
+ALUResult[1] <= datapath:dp.aluresult[1]
+ALUResult[2] <= datapath:dp.aluresult[2]
+ALUResult[3] <= datapath:dp.aluresult[3]
+ALUResult[4] <= datapath:dp.aluresult[4]
+ALUResult[5] <= datapath:dp.aluresult[5]
+ALUResult[6] <= datapath:dp.aluresult[6]
+ALUResult[7] <= datapath:dp.aluresult[7]
+ALUResult[8] <= datapath:dp.aluresult[8]
+ALUResult[9] <= datapath:dp.aluresult[9]
+ALUResult[10] <= datapath:dp.aluresult[10]
+ALUResult[11] <= datapath:dp.aluresult[11]
+ALUResult[12] <= datapath:dp.aluresult[12]
+ALUResult[13] <= datapath:dp.aluresult[13]
+ALUResult[14] <= datapath:dp.aluresult[14]
+ALUResult[15] <= datapath:dp.aluresult[15]
+ALUResult[16] <= datapath:dp.aluresult[16]
+ALUResult[17] <= datapath:dp.aluresult[17]
+ALUResult[18] <= datapath:dp.aluresult[18]
+ALUResult[19] <= datapath:dp.aluresult[19]
+ALUResult[20] <= datapath:dp.aluresult[20]
+ALUResult[21] <= datapath:dp.aluresult[21]
+ALUResult[22] <= datapath:dp.aluresult[22]
+ALUResult[23] <= datapath:dp.aluresult[23]
+ALUResult[24] <= datapath:dp.aluresult[24]
+ALUResult[25] <= datapath:dp.aluresult[25]
+ALUResult[26] <= datapath:dp.aluresult[26]
+ALUResult[27] <= datapath:dp.aluresult[27]
+ALUResult[28] <= datapath:dp.aluresult[28]
+ALUResult[29] <= datapath:dp.aluresult[29]
+ALUResult[30] <= datapath:dp.aluresult[30]
+ALUResult[31] <= datapath:dp.aluresult[31]
+WriteData[0] <= datapath:dp.writedata[0]
+WriteData[1] <= datapath:dp.writedata[1]
+WriteData[2] <= datapath:dp.writedata[2]
+WriteData[3] <= datapath:dp.writedata[3]
+WriteData[4] <= datapath:dp.writedata[4]
+WriteData[5] <= datapath:dp.writedata[5]
+WriteData[6] <= datapath:dp.writedata[6]
+WriteData[7] <= datapath:dp.writedata[7]
+WriteData[8] <= datapath:dp.writedata[8]
+WriteData[9] <= datapath:dp.writedata[9]
+WriteData[10] <= datapath:dp.writedata[10]
+WriteData[11] <= datapath:dp.writedata[11]
+WriteData[12] <= datapath:dp.writedata[12]
+WriteData[13] <= datapath:dp.writedata[13]
+WriteData[14] <= datapath:dp.writedata[14]
+WriteData[15] <= datapath:dp.writedata[15]
+WriteData[16] <= datapath:dp.writedata[16]
+WriteData[17] <= datapath:dp.writedata[17]
+WriteData[18] <= datapath:dp.writedata[18]
+WriteData[19] <= datapath:dp.writedata[19]
+WriteData[20] <= datapath:dp.writedata[20]
+WriteData[21] <= datapath:dp.writedata[21]
+WriteData[22] <= datapath:dp.writedata[22]
+WriteData[23] <= datapath:dp.writedata[23]
+WriteData[24] <= datapath:dp.writedata[24]
+WriteData[25] <= datapath:dp.writedata[25]
+WriteData[26] <= datapath:dp.writedata[26]
+WriteData[27] <= datapath:dp.writedata[27]
+WriteData[28] <= datapath:dp.writedata[28]
+WriteData[29] <= datapath:dp.writedata[29]
+WriteData[30] <= datapath:dp.writedata[30]
+WriteData[31] <= datapath:dp.writedata[31]
+ReadData[0] => datapath:dp.readdata[0]
+ReadData[1] => datapath:dp.readdata[1]
+ReadData[2] => datapath:dp.readdata[2]
+ReadData[3] => datapath:dp.readdata[3]
+ReadData[4] => datapath:dp.readdata[4]
+ReadData[5] => datapath:dp.readdata[5]
+ReadData[6] => datapath:dp.readdata[6]
+ReadData[7] => datapath:dp.readdata[7]
+ReadData[8] => datapath:dp.readdata[8]
+ReadData[9] => datapath:dp.readdata[9]
+ReadData[10] => datapath:dp.readdata[10]
+ReadData[11] => datapath:dp.readdata[11]
+ReadData[12] => datapath:dp.readdata[12]
+ReadData[13] => datapath:dp.readdata[13]
+ReadData[14] => datapath:dp.readdata[14]
+ReadData[15] => datapath:dp.readdata[15]
+ReadData[16] => datapath:dp.readdata[16]
+ReadData[17] => datapath:dp.readdata[17]
+ReadData[18] => datapath:dp.readdata[18]
+ReadData[19] => datapath:dp.readdata[19]
+ReadData[20] => datapath:dp.readdata[20]
+ReadData[21] => datapath:dp.readdata[21]
+ReadData[22] => datapath:dp.readdata[22]
+ReadData[23] => datapath:dp.readdata[23]
+ReadData[24] => datapath:dp.readdata[24]
+ReadData[25] => datapath:dp.readdata[25]
+ReadData[26] => datapath:dp.readdata[26]
+ReadData[27] => datapath:dp.readdata[27]
+ReadData[28] => datapath:dp.readdata[28]
+ReadData[29] => datapath:dp.readdata[29]
+ReadData[30] => datapath:dp.readdata[30]
+ReadData[31] => datapath:dp.readdata[31]
+
+
+|riscvsingle|controller:c
+zero => pcsrc.IN1
+opcode[0] => maindec:mdec.opcode[0]
+opcode[1] => maindec:mdec.opcode[1]
+opcode[2] => maindec:mdec.opcode[2]
+opcode[3] => maindec:mdec.opcode[3]
+opcode[4] => maindec:mdec.opcode[4]
+opcode[5] => maindec:mdec.opcode[5]
+opcode[5] => aludec:adec.opb5
+opcode[6] => maindec:mdec.opcode[6]
+funct3[0] => aludec:adec.funct3[0]
+funct3[1] => aludec:adec.funct3[1]
+funct3[2] => aludec:adec.funct3[2]
+funct7b5 => aludec:adec.funct7b5
+pcsrc <= pcsrc.DB_MAX_OUTPUT_PORT_TYPE
+resultsrc[0] <= maindec:mdec.resultsrc[0]
+resultsrc[1] <= maindec:mdec.resultsrc[1]
+memwrite <= maindec:mdec.memwrite
+alusrc <= maindec:mdec.alusrc
+immsrc[0] <= maindec:mdec.immsrc[0]
+immsrc[1] <= maindec:mdec.immsrc[1]
+regwrite <= maindec:mdec.regwrite
+alucontrol[0] <= aludec:adec.ALUControl[0]
+alucontrol[1] <= aludec:adec.ALUControl[1]
+alucontrol[2] <= aludec:adec.ALUControl[2]
+
+
+|riscvsingle|controller:c|maindec:mdec
+opcode[0] => Mux0.IN134
+opcode[0] => Mux3.IN134
+opcode[1] => Mux0.IN133
+opcode[1] => Mux3.IN133
+opcode[2] => Mux0.IN132
+opcode[2] => Mux3.IN132
+opcode[3] => Mux0.IN131
+opcode[3] => Mux1.IN10
+opcode[3] => Mux3.IN131
+opcode[3] => Mux5.IN5
+opcode[3] => jump.DATAIN
+opcode[4] => Mux0.IN130
+opcode[4] => Mux2.IN10
+opcode[4] => Mux3.IN130
+opcode[4] => Mux4.IN5
+opcode[4] => aluop[1].DATAIN
+opcode[5] => Mux0.IN129
+opcode[5] => Mux1.IN9
+opcode[5] => Mux2.IN9
+opcode[5] => Mux3.IN129
+opcode[6] => Mux0.IN128
+opcode[6] => Mux1.IN8
+opcode[6] => Mux2.IN8
+opcode[6] => Mux3.IN128
+opcode[6] => Mux4.IN4
+opcode[6] => Mux5.IN4
+opcode[6] => immsrc[1].DATAIN
+opcode[6] => resultsrc[1].DATAIN
+opcode[6] => aluop[0].DATAIN
+aluop[0] <= opcode[6].DB_MAX_OUTPUT_PORT_TYPE
+aluop[1] <= opcode[4].DB_MAX_OUTPUT_PORT_TYPE
+immsrc[0] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+immsrc[1] <= opcode[6].DB_MAX_OUTPUT_PORT_TYPE
+resultsrc[0] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+resultsrc[1] <= opcode[6].DB_MAX_OUTPUT_PORT_TYPE
+alusrc <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+branch <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+jump <= opcode[3].DB_MAX_OUTPUT_PORT_TYPE
+memwrite <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+regwrite <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|riscvsingle|controller:c|aludec:adec
+aluop[0] => Mux4.IN5
+aluop[0] => Mux5.IN5
+aluop[0] => Mux6.IN5
+aluop[1] => Mux4.IN4
+aluop[1] => Mux5.IN4
+aluop[1] => Mux6.IN4
+opb5 => Mux0.IN4
+funct3[0] => Mux1.IN10
+funct3[0] => Mux2.IN5
+funct3[0] => Mux3.IN10
+funct3[1] => Mux1.IN9
+funct3[1] => Mux3.IN9
+funct3[2] => Mux1.IN8
+funct3[2] => Mux2.IN4
+funct3[2] => Mux3.IN8
+funct7b5 => Mux0.IN5
+ALUControl[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+ALUControl[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+ALUControl[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|riscvsingle|datapath:dp
 clk => flopr:pcreg.clk
 clk => regfile:rf.clk
 reset => flopr:pcreg.reset
@@ -91,106 +360,106 @@ readdata[28] => mux3:resultmux.d1[28]
 readdata[29] => mux3:resultmux.d1[29]
 readdata[30] => mux3:resultmux.d1[30]
 readdata[31] => mux3:resultmux.d1[31]
-aluresult[0] << alu:alunit.result[0]
-aluresult[1] << alu:alunit.result[1]
-aluresult[2] << alu:alunit.result[2]
-aluresult[3] << alu:alunit.result[3]
-aluresult[4] << alu:alunit.result[4]
-aluresult[5] << alu:alunit.result[5]
-aluresult[6] << alu:alunit.result[6]
-aluresult[7] << alu:alunit.result[7]
-aluresult[8] << alu:alunit.result[8]
-aluresult[9] << alu:alunit.result[9]
-aluresult[10] << alu:alunit.result[10]
-aluresult[11] << alu:alunit.result[11]
-aluresult[12] << alu:alunit.result[12]
-aluresult[13] << alu:alunit.result[13]
-aluresult[14] << alu:alunit.result[14]
-aluresult[15] << alu:alunit.result[15]
-aluresult[16] << alu:alunit.result[16]
-aluresult[17] << alu:alunit.result[17]
-aluresult[18] << alu:alunit.result[18]
-aluresult[19] << alu:alunit.result[19]
-aluresult[20] << alu:alunit.result[20]
-aluresult[21] << alu:alunit.result[21]
-aluresult[22] << alu:alunit.result[22]
-aluresult[23] << alu:alunit.result[23]
-aluresult[24] << alu:alunit.result[24]
-aluresult[25] << alu:alunit.result[25]
-aluresult[26] << alu:alunit.result[26]
-aluresult[27] << alu:alunit.result[27]
-aluresult[28] << alu:alunit.result[28]
-aluresult[29] << alu:alunit.result[29]
-aluresult[30] << alu:alunit.result[30]
-aluresult[31] << alu:alunit.result[31]
-writedata[0] << regfile:rf.rd2[0]
-writedata[1] << regfile:rf.rd2[1]
-writedata[2] << regfile:rf.rd2[2]
-writedata[3] << regfile:rf.rd2[3]
-writedata[4] << regfile:rf.rd2[4]
-writedata[5] << regfile:rf.rd2[5]
-writedata[6] << regfile:rf.rd2[6]
-writedata[7] << regfile:rf.rd2[7]
-writedata[8] << regfile:rf.rd2[8]
-writedata[9] << regfile:rf.rd2[9]
-writedata[10] << regfile:rf.rd2[10]
-writedata[11] << regfile:rf.rd2[11]
-writedata[12] << regfile:rf.rd2[12]
-writedata[13] << regfile:rf.rd2[13]
-writedata[14] << regfile:rf.rd2[14]
-writedata[15] << regfile:rf.rd2[15]
-writedata[16] << regfile:rf.rd2[16]
-writedata[17] << regfile:rf.rd2[17]
-writedata[18] << regfile:rf.rd2[18]
-writedata[19] << regfile:rf.rd2[19]
-writedata[20] << regfile:rf.rd2[20]
-writedata[21] << regfile:rf.rd2[21]
-writedata[22] << regfile:rf.rd2[22]
-writedata[23] << regfile:rf.rd2[23]
-writedata[24] << regfile:rf.rd2[24]
-writedata[25] << regfile:rf.rd2[25]
-writedata[26] << regfile:rf.rd2[26]
-writedata[27] << regfile:rf.rd2[27]
-writedata[28] << regfile:rf.rd2[28]
-writedata[29] << regfile:rf.rd2[29]
-writedata[30] << regfile:rf.rd2[30]
-writedata[31] << regfile:rf.rd2[31]
-pc[0] << flopr:pcreg.q[0]
-pc[1] << flopr:pcreg.q[1]
-pc[2] << flopr:pcreg.q[2]
-pc[3] << flopr:pcreg.q[3]
-pc[4] << flopr:pcreg.q[4]
-pc[5] << flopr:pcreg.q[5]
-pc[6] << flopr:pcreg.q[6]
-pc[7] << flopr:pcreg.q[7]
-pc[8] << flopr:pcreg.q[8]
-pc[9] << flopr:pcreg.q[9]
-pc[10] << flopr:pcreg.q[10]
-pc[11] << flopr:pcreg.q[11]
-pc[12] << flopr:pcreg.q[12]
-pc[13] << flopr:pcreg.q[13]
-pc[14] << flopr:pcreg.q[14]
-pc[15] << flopr:pcreg.q[15]
-pc[16] << flopr:pcreg.q[16]
-pc[17] << flopr:pcreg.q[17]
-pc[18] << flopr:pcreg.q[18]
-pc[19] << flopr:pcreg.q[19]
-pc[20] << flopr:pcreg.q[20]
-pc[21] << flopr:pcreg.q[21]
-pc[22] << flopr:pcreg.q[22]
-pc[23] << flopr:pcreg.q[23]
-pc[24] << flopr:pcreg.q[24]
-pc[25] << flopr:pcreg.q[25]
-pc[26] << flopr:pcreg.q[26]
-pc[27] << flopr:pcreg.q[27]
-pc[28] << flopr:pcreg.q[28]
-pc[29] << flopr:pcreg.q[29]
-pc[30] << flopr:pcreg.q[30]
-pc[31] << flopr:pcreg.q[31]
-zero << alu:alunit.zero
+aluresult[0] <= alu:alunit.result[0]
+aluresult[1] <= alu:alunit.result[1]
+aluresult[2] <= alu:alunit.result[2]
+aluresult[3] <= alu:alunit.result[3]
+aluresult[4] <= alu:alunit.result[4]
+aluresult[5] <= alu:alunit.result[5]
+aluresult[6] <= alu:alunit.result[6]
+aluresult[7] <= alu:alunit.result[7]
+aluresult[8] <= alu:alunit.result[8]
+aluresult[9] <= alu:alunit.result[9]
+aluresult[10] <= alu:alunit.result[10]
+aluresult[11] <= alu:alunit.result[11]
+aluresult[12] <= alu:alunit.result[12]
+aluresult[13] <= alu:alunit.result[13]
+aluresult[14] <= alu:alunit.result[14]
+aluresult[15] <= alu:alunit.result[15]
+aluresult[16] <= alu:alunit.result[16]
+aluresult[17] <= alu:alunit.result[17]
+aluresult[18] <= alu:alunit.result[18]
+aluresult[19] <= alu:alunit.result[19]
+aluresult[20] <= alu:alunit.result[20]
+aluresult[21] <= alu:alunit.result[21]
+aluresult[22] <= alu:alunit.result[22]
+aluresult[23] <= alu:alunit.result[23]
+aluresult[24] <= alu:alunit.result[24]
+aluresult[25] <= alu:alunit.result[25]
+aluresult[26] <= alu:alunit.result[26]
+aluresult[27] <= alu:alunit.result[27]
+aluresult[28] <= alu:alunit.result[28]
+aluresult[29] <= alu:alunit.result[29]
+aluresult[30] <= alu:alunit.result[30]
+aluresult[31] <= alu:alunit.result[31]
+pc[0] <= flopr:pcreg.q[0]
+pc[1] <= flopr:pcreg.q[1]
+pc[2] <= flopr:pcreg.q[2]
+pc[3] <= flopr:pcreg.q[3]
+pc[4] <= flopr:pcreg.q[4]
+pc[5] <= flopr:pcreg.q[5]
+pc[6] <= flopr:pcreg.q[6]
+pc[7] <= flopr:pcreg.q[7]
+pc[8] <= flopr:pcreg.q[8]
+pc[9] <= flopr:pcreg.q[9]
+pc[10] <= flopr:pcreg.q[10]
+pc[11] <= flopr:pcreg.q[11]
+pc[12] <= flopr:pcreg.q[12]
+pc[13] <= flopr:pcreg.q[13]
+pc[14] <= flopr:pcreg.q[14]
+pc[15] <= flopr:pcreg.q[15]
+pc[16] <= flopr:pcreg.q[16]
+pc[17] <= flopr:pcreg.q[17]
+pc[18] <= flopr:pcreg.q[18]
+pc[19] <= flopr:pcreg.q[19]
+pc[20] <= flopr:pcreg.q[20]
+pc[21] <= flopr:pcreg.q[21]
+pc[22] <= flopr:pcreg.q[22]
+pc[23] <= flopr:pcreg.q[23]
+pc[24] <= flopr:pcreg.q[24]
+pc[25] <= flopr:pcreg.q[25]
+pc[26] <= flopr:pcreg.q[26]
+pc[27] <= flopr:pcreg.q[27]
+pc[28] <= flopr:pcreg.q[28]
+pc[29] <= flopr:pcreg.q[29]
+pc[30] <= flopr:pcreg.q[30]
+pc[31] <= flopr:pcreg.q[31]
+writedata[0] <= regfile:rf.rd2[0]
+writedata[1] <= regfile:rf.rd2[1]
+writedata[2] <= regfile:rf.rd2[2]
+writedata[3] <= regfile:rf.rd2[3]
+writedata[4] <= regfile:rf.rd2[4]
+writedata[5] <= regfile:rf.rd2[5]
+writedata[6] <= regfile:rf.rd2[6]
+writedata[7] <= regfile:rf.rd2[7]
+writedata[8] <= regfile:rf.rd2[8]
+writedata[9] <= regfile:rf.rd2[9]
+writedata[10] <= regfile:rf.rd2[10]
+writedata[11] <= regfile:rf.rd2[11]
+writedata[12] <= regfile:rf.rd2[12]
+writedata[13] <= regfile:rf.rd2[13]
+writedata[14] <= regfile:rf.rd2[14]
+writedata[15] <= regfile:rf.rd2[15]
+writedata[16] <= regfile:rf.rd2[16]
+writedata[17] <= regfile:rf.rd2[17]
+writedata[18] <= regfile:rf.rd2[18]
+writedata[19] <= regfile:rf.rd2[19]
+writedata[20] <= regfile:rf.rd2[20]
+writedata[21] <= regfile:rf.rd2[21]
+writedata[22] <= regfile:rf.rd2[22]
+writedata[23] <= regfile:rf.rd2[23]
+writedata[24] <= regfile:rf.rd2[24]
+writedata[25] <= regfile:rf.rd2[25]
+writedata[26] <= regfile:rf.rd2[26]
+writedata[27] <= regfile:rf.rd2[27]
+writedata[28] <= regfile:rf.rd2[28]
+writedata[29] <= regfile:rf.rd2[29]
+writedata[30] <= regfile:rf.rd2[30]
+writedata[31] <= regfile:rf.rd2[31]
+zero <= alu:alunit.zero
 
 
-|datapath|flopr:pcreg
+|riscvsingle|datapath:dp|flopr:pcreg
 d[0] => q[0]~reg0.DATAIN
 d[1] => q[1]~reg0.DATAIN
 d[2] => q[2]~reg0.DATAIN
@@ -321,7 +590,7 @@ reset => q[30]~reg0.ACLR
 reset => q[31]~reg0.ACLR
 
 
-|datapath|adder:pcadd4
+|riscvsingle|datapath:dp|adder:pcadd4
 a[0] => LPM_ADD_SUB:adder_inst.DATAA[0]
 a[1] => LPM_ADD_SUB:adder_inst.DATAA[1]
 a[2] => LPM_ADD_SUB:adder_inst.DATAA[2]
@@ -422,7 +691,7 @@ y[31] <= LPM_ADD_SUB:adder_inst.RESULT[31]
 c_out <= LPM_ADD_SUB:adder_inst.COUT
 
 
-|datapath|adder:pcadd4|LPM_ADD_SUB:adder_inst
+|riscvsingle|datapath:dp|adder:pcadd4|LPM_ADD_SUB:adder_inst
 dataa[0] => add_sub_bhg:auto_generated.dataa[0]
 dataa[1] => add_sub_bhg:auto_generated.dataa[1]
 dataa[2] => add_sub_bhg:auto_generated.dataa[2]
@@ -528,7 +797,7 @@ cout <= add_sub_bhg:auto_generated.cout
 overflow <= <GND>
 
 
-|datapath|adder:pcadd4|LPM_ADD_SUB:adder_inst|add_sub_bhg:auto_generated
+|riscvsingle|datapath:dp|adder:pcadd4|LPM_ADD_SUB:adder_inst|add_sub_bhg:auto_generated
 cin => op_1.IN66
 cin => op_1.IN67
 cout <= op_1.DB_MAX_OUTPUT_PORT_TYPE
@@ -630,7 +899,7 @@ result[30] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
 result[31] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|adder:pcaddbranch
+|riscvsingle|datapath:dp|adder:pcaddbranch
 a[0] => LPM_ADD_SUB:adder_inst.DATAA[0]
 a[1] => LPM_ADD_SUB:adder_inst.DATAA[1]
 a[2] => LPM_ADD_SUB:adder_inst.DATAA[2]
@@ -731,7 +1000,7 @@ y[31] <= LPM_ADD_SUB:adder_inst.RESULT[31]
 c_out <= LPM_ADD_SUB:adder_inst.COUT
 
 
-|datapath|adder:pcaddbranch|LPM_ADD_SUB:adder_inst
+|riscvsingle|datapath:dp|adder:pcaddbranch|LPM_ADD_SUB:adder_inst
 dataa[0] => add_sub_bhg:auto_generated.dataa[0]
 dataa[1] => add_sub_bhg:auto_generated.dataa[1]
 dataa[2] => add_sub_bhg:auto_generated.dataa[2]
@@ -837,7 +1106,7 @@ cout <= add_sub_bhg:auto_generated.cout
 overflow <= <GND>
 
 
-|datapath|adder:pcaddbranch|LPM_ADD_SUB:adder_inst|add_sub_bhg:auto_generated
+|riscvsingle|datapath:dp|adder:pcaddbranch|LPM_ADD_SUB:adder_inst|add_sub_bhg:auto_generated
 cin => op_1.IN66
 cin => op_1.IN67
 cout <= op_1.DB_MAX_OUTPUT_PORT_TYPE
@@ -939,7 +1208,7 @@ result[30] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
 result[31] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|mux2:pcmux
+|riscvsingle|datapath:dp|mux2:pcmux
 d0[0] => y.DATAB
 d0[1] => y.DATAB
 d0[2] => y.DATAB
@@ -1070,7 +1339,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|extend:ext
+|riscvsingle|datapath:dp|extend:ext
 immsrc[0] => Mux0.IN1
 immsrc[0] => Mux1.IN1
 immsrc[0] => Mux2.IN1
@@ -1205,7 +1474,7 @@ immext[30] <= instr[31].DB_MAX_OUTPUT_PORT_TYPE
 immext[31] <= instr[31].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|regfile:rf
+|riscvsingle|datapath:dp|regfile:rf
 clk => reg_data~37.CLK
 clk => reg_data~0.CLK
 clk => reg_data~1.CLK
@@ -1397,7 +1666,7 @@ rd2[30] <= reg_data.PORTBDATAOUT30
 rd2[31] <= reg_data.PORTBDATAOUT31
 
 
-|datapath|mux2:srcbmux
+|riscvsingle|datapath:dp|mux2:srcbmux
 d0[0] => y.DATAB
 d0[1] => y.DATAB
 d0[2] => y.DATAB
@@ -1528,7 +1797,7 @@ y[30] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[31] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|alu:alunit
+|riscvsingle|datapath:dp|alu:alunit
 a[0] => sum.IN0
 a[0] => sub.IN0
 a[0] => res.IN0
@@ -1916,7 +2185,7 @@ result[31] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 zero <= result.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|mux3:resultmux
+|riscvsingle|datapath:dp|mux3:resultmux
 d0[0] => Mux31.IN1
 d0[1] => Mux30.IN1
 d0[2] => Mux29.IN1
