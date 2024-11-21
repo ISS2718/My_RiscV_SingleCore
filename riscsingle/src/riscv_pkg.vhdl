@@ -134,12 +134,31 @@ package riscv_pkg is
     );
   end component;
 
+  -- Component maindec: Main control decoder
   component maindec is
     port (
       opcode : in std_logic_vector(6 downto 0);
       aluop, immsrc, resultsrc : out std_logic_vector(1 downto 0);
       alusrc, branch, jump, memwrite, regwrite : out std_logic
     );
+  end component;
+
+  -- Component controller: Main control decoder
+  component controller is
+    port (
+      zero : in std_logic;
+      opcode : in std_logic_vector(6 downto 0);
+      funct3 : in std_logic_vector(2 downto 0);
+      funct7b5 : in std_logic;
+  
+      pcsrc : out std_logic;
+      resultsrc : out std_logic_vector(1 downto 0);
+      memwrite : out std_logic;
+      alusrc : out std_logic;
+      immsrc : out std_logic_vector(1 downto 0);
+      regwrite : out std_logic;
+      alucontrol : out std_logic_vector(2 downto 0)
+    ) ;
   end component;
 
   -- Component datapath: Data path of the RISC-V processor
