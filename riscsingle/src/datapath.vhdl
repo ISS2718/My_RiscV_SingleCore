@@ -39,7 +39,7 @@ entity datapath is
 		aluresult, pc, writedata : buffer std_logic_vector(Width-1 downto 0);
 
     zero : out std_logic
-  ) ;
+  );
 end datapath;
 
 architecture behavioral of datapath is
@@ -57,7 +57,7 @@ begin
     clk => clk,
     reset => reset,
     d => pcnext,
-    q => PC
+    q => pc
   );
 
   -- PC + 4 logic

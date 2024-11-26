@@ -14,12 +14,12 @@
 -- Last Modified: 2024-11-21
 ----------------------------
 library IEEE;
-use IEEE.STD_LOGIC_1164.all;
+use IEEE.STD_LOGIC_1164.ALL;
 use work.riscv_pkg.all;
 
 entity riscvsingle is
   generic(
-    Width : integer := 32  -- Register width
+    Width : integer := 32
   );
   port (
     clk, reset: in std_logic;
