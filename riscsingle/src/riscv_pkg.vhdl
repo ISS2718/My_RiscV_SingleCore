@@ -164,7 +164,7 @@ package riscv_pkg is
   -- Component datapath: Data path of the RISC-V processor
   component datapath is
     generic(
-      Width : integer := 32  -- Register width
+      Width : integer := 32
     );
     port (
       clk, reset : in std_logic;  -- Clock signal
@@ -180,7 +180,51 @@ package riscv_pkg is
       pc: buffer STD_LOGIC_VECTOR(Width-1 downto 0);
   
       zero: out STD_LOGIC
+    );
+  end component;
+
+  -- Component risvcsingle: RISC-V processor
+  component riscvsingle is
+    generic(
+      Width : integer := 32
+    );
+    port (
+      clk, reset: in std_logic;
+      PC: out std_logic_vector(Width-1 downto 0);
+      Instr: in std_logic_vector(Width-1 downto 0);
+      MemWrite: out std_logic;
+      ALUResult, WriteData: out std_logic_vector(Width-1 downto 0);
+      ReadData: in std_logic_vector(Width-1 downto 0)
     ) ;
+  end component;
+
+  -- Component imem: Instruction memory
+  component imem is
+    port(
+      a: in std_logic_vector(31 downto 0);
+		  rd: out std_logic_vector(31 downto 0)
+    );
+  end component;
+
+  -- Component dmem: Data memory
+  component dmem is
+    port(
+      clk, we: in std_logic;
+      a, wd: in std_logic_vector(31 downto 0);
+      rd: out std_logic_vector(31 downto 0)
+    );
+  end component;
+
+  -- Component top: Top-level module
+  component top is
+    generic(
+      Width : integer := 32
+    );
+    port(
+      clk, reset : in std_logic;
+      WriteData, DataAdr : buffer std_logic_vector(31 downto 0);
+      MemWrite : buffer std_logic 
+    );
   end component;
 
   -- Function to overload the addition operator for std_logic_vector
@@ -203,29 +247,14 @@ end package riscv_pkg;
 package body riscv_pkg is
   -- Addition function
   function "+" (a, b : std_logic_vector) return std_logic_vector is
-    variable sum : std_logic_vector(a'length-1 downto 0);
   begin
-    for i in 0 to a'length-1 loop
-      sum(i) := a(i) XOR b(i);  -- Bitwise addition using XOR
-    end loop;
-    return sum;
+    return std_logic_vector(unsigned(a) + unsigned(b));
   end function;
 
   -- Subtraction function
-  function "-" (a, b : std_logic_vector) 
-  return std_logic_vector is
-    variable carry : std_logic;
-    variable sub : std_logic_vector(a'length-1 downto 0);
+  function "-" (a, b : std_logic_vector) return std_logic_vector is
   begin
-    carry := '1';
-    for i in 0 to a'length-1 loop
-      if i = 0 then
-        sub(i) := a(i) XOR (NOT b(i)) XOR carry;  -- Bitwise subtraction with carry
-      else
-        sub(i) := a(i) XOR (NOT b(i));
-      end if;
-    end loop;
-    return sub;
+    return std_logic_vector(unsigned(a) - unsigned(b));
   end function;
 
   -- Less than comparison function
@@ -257,9 +286,9 @@ package body riscv_pkg is
   function to_integer(a : std_logic_vector) return integer is
     variable result : integer := 0;
   begin
-    for i in 0 to a'length-1 loop
+    for i in a'range loop
       if a(i) = '1' then
-        result := result + 2**i;  -- Add the corresponding power of 2
+        result := result + 2**(i - a'low);  -- Ajustar o índice para começar de 0
       end if;
     end loop;
     return result;
