@@ -1,1 +1,155 @@
+C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/alu.vhdl {1 {vcom -work work -2002 -explicit -stats=none C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/alu.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package riscv_pkg
+-- Compiling entity alu
+-- Compiling architecture behavioral of alu
 
+} {} {}} C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/top.vhdl {1 {vcom -work work -2002 -explicit -stats=none C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/top.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package riscv_pkg
+-- Compiling entity top
+-- Compiling architecture test of top
+
+} {} {}} C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux3.vhdl {1 {vcom -work work -2002 -explicit -stats=none C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux3.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux3
+-- Compiling architecture behavioral of mux3
+
+} {} {}} C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/datapath.vhdl {1 {vcom -work work -2002 -explicit -stats=none C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/datapath.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package riscv_pkg
+-- Compiling entity datapath
+-- Compiling architecture behavioral of datapath
+
+} {} {}} C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/testbench.vhdl {1 {vcom -work work -2002 -explicit -stats=none C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/testbench.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package riscv_pkg
+-- Compiling entity testbench
+-- Compiling architecture test of testbench
+
+} {} {}} C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/riscv_pkg.vhdl {2 {vcom -work work -2002 -explicit -stats=none C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/riscv_pkg.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package riscv_pkg
+-- Compiling package body riscv_pkg
+-- Loading package riscv_pkg
+** Warning: C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/riscv_pkg.vhdl(267): (vcom-1074) Non-locally static OTHERS choice is allowed only if it is the only choice of the only association.
+
+} {} {}} C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/adder.vhdl {1 {vcom -work work -2002 -explicit -stats=none C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/adder.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package LPM_COMPONENTS
+-- Compiling entity adder
+-- Compiling architecture behavioral of adder
+-- Compiling architecture efficient of adder
+-- Loading entity adder
+-- Compiling configuration cfg_adder
+-- Loading entity adder
+-- Loading architecture behavioral of adder
+
+} {} {}} C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/extend.vhdl {1 {vcom -work work -2002 -explicit -stats=none C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/extend.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity extend
+-- Compiling architecture behavioral of extend
+
+} {} {}} C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/riscvsingle.vhdl {1 {vcom -work work -2002 -explicit -stats=none C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/riscvsingle.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package riscv_pkg
+-- Compiling entity riscvsingle
+-- Compiling architecture behavioral of riscvsingle
+
+} {} {}} C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/maindec.vhdl {1 {vcom -work work -2002 -explicit -stats=none C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/maindec.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity maindec
+-- Compiling architecture behavioral of maindec
+
+} {} {}} C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/dmem.vhdl {1 {vcom -work work -2002 -explicit -stats=none C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/dmem.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package riscv_pkg
+-- Compiling entity dmem
+-- Compiling architecture behave of dmem
+
+} {} {}} C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/flopr.vhdl {1 {vcom -work work -2002 -explicit -stats=none C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/flopr.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity flopr
+-- Compiling architecture behavioral of flopr
+
+} {} {}} C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/controller.vhdl {1 {vcom -work work -2002 -explicit -stats=none C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/controller.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package riscv_pkg
+-- Compiling entity controller
+-- Compiling architecture behavioral of controller
+
+} {} {}} C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux2.vhdl {1 {vcom -work work -2002 -explicit -stats=none C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/mux2.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux2
+-- Compiling architecture behavioral of mux2
+
+} {} {}} C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/aludec.vhdl {1 {vcom -work work -2002 -explicit -stats=none C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/aludec.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity aludec
+-- Compiling architecture behavioral of aludec
+
+} {} {}} C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/imem.vhdl {1 {vcom -work work -2002 -explicit -stats=none C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/imem.vhdl
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_textio
+-- Loading package NUMERIC_STD
+-- Loading package riscv_pkg
+-- Compiling entity imem
+-- Compiling architecture behave of imem
+
+} {} {}}
