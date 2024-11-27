@@ -22,9 +22,9 @@ V8S:FbAQLK9E^QUngck>=n0
 !s100 =Xf<4jOPQYzAWNZLR9@ME0
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1732662671
+Z8 !s110 1732665771
 !i10b 1
-Z9 !s108 1732662671.000000
+Z9 !s108 1732665771.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/adder.vhdl|
 Z11 !s107 C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/adder.vhdl|
 !i113 1
@@ -124,9 +124,9 @@ VIn;OBiiV_S9^1<:@6E?VJ0
 !s100 elN3WP4C:Sed7T^z;90LB1
 R7
 32
-Z25 !s110 1732662672
+Z25 !s110 1732665772
 !i10b 1
-Z26 !s108 1732662672.000000
+Z26 !s108 1732665772.000000
 Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/aludec.vhdl|
 Z28 !s107 C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/aludec.vhdl|
 !i113 1
@@ -290,7 +290,7 @@ R46
 R12
 R13
 Edmem
-Z47 w1732658130
+Z47 w1732665674
 R16
 R17
 R2
@@ -299,9 +299,9 @@ R4
 Z48 8C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/dmem.vhdl
 Z49 FC:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/dmem.vhdl
 l0
-L14
-V[<d?TFPHCAV`KedYiD6DF1
-!s100 Y@H0e48<`2im4;:[;ZW4i1
+L5
+VFoFm@9S8Fb>ZPh:?BH88F3
+!s100 8eWRV35>f`aD[GWnaKkfg0
 R7
 32
 R25
@@ -317,11 +317,11 @@ R16
 R17
 R2
 R3
-DEx4 work 4 dmem 0 22 [<d?TFPHCAV`KedYiD6DF1
-l23
-L22
-VgRjHlYfdlDllZeBNgSGf>0
-!s100 TAVCIOHe]o5ZFQeQomb7i2
+DEx4 work 4 dmem 0 22 FoFm@9S8Fb>ZPh:?BH88F3
+l14
+L13
+V=z3HK>^<AA__MoZ=8dg`l3
+!s100 :<@U@^j8LRX:iPo>:TSf?3
 R7
 32
 R25
@@ -411,7 +411,7 @@ R61
 R12
 R13
 Eimem
-Z62 w1732644728
+Z62 w1732665610
 R16
 R17
 Z63 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
@@ -422,8 +422,8 @@ Z64 8C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/i
 Z65 FC:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/imem.vhdl
 l0
 L16
-VRQDRLj:hYdjD7U27A6IPV3
-!s100 6_?f3zZfHoObamaAVYSYf0
+Vj6UTk2hATNjGn?d`aa]NC0
+!s100 VhnF84LQG0XWcU5YG`Ofb0
 R7
 32
 R25
@@ -440,11 +440,11 @@ R17
 R63
 R2
 R3
-DEx4 work 4 imem 0 22 RQDRLj:hYdjD7U27A6IPV3
-l46
+DEx4 work 4 imem 0 22 j6UTk2hATNjGn?d`aa]NC0
+l50
 L23
-Vbd<44eKnLg:T4R^E>>`z11
-!s100 SKmLj;KI@le`Sjo]_=iDY0
+VcU4G?][ASB<NFCefK1l<g1
+!s100 o=1UIe@i>nnRV^FC4HNUG1
 R7
 32
 R25
@@ -640,7 +640,7 @@ Priscv_pkg
 R16
 R2
 R3
-Z84 w1732662355
+Z84 w1732664441
 R4
 Z85 8C:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/riscv_pkg.vhdl
 Z86 FC:/Users/isaac/OneDrive/Documentos/_My_Projects/VHDL_Study/riscsingle/src/riscv_pkg.vhdl

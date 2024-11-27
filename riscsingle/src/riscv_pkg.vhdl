@@ -17,6 +17,10 @@
 -- - aludec: ALU control decoder
 -- - maindec: Main control decoder
 -- - datapath: Data path of the RISC-V processor
+-- - riscvsingle: RISC-V processor
+-- - imem: Instruction memory
+-- - dmem: Data memory
+-- - top: Top-level module
 --
 -- This package includes the following functions:
 -- - "+" (addition)
@@ -25,7 +29,7 @@
 -- - nor_reduce (NOR reduction)
 -- - to_integer (conversion to integer)
 --
--- Last Modified: 2024-11-12
+-- Last Modified: 2024-11-26
 ----------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

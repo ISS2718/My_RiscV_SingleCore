@@ -1,5 +1,5 @@
 Flow report for riscsingle
-Tue Nov 26 09:59:26 2024
+Tue Nov 26 21:01:33 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 26 09:59:26 2024          ;
+; Flow Status                        ; Successful - Tue Nov 26 21:01:33 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; riscsingle                                     ;
-; Top-level Entity Name              ; riscvsingle                                    ;
+; Top-level Entity Name              ; top                                            ;
 ; Family                             ; MAX 10                                         ;
 ; Device                             ; 10M50DAF484C7G                                 ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 2,722                                          ;
-;     Total combinational functions  ; 1,730                                          ;
-;     Dedicated logic registers      ; 1,056                                          ;
-; Total registers                    ; 1056                                           ;
-; Total pins                         ; 163                                            ;
+; Total logic elements               ; 0                                              ;
+;     Total combinational functions  ; 0                                              ;
+;     Dedicated logic registers      ; 0                                              ;
+; Total registers                    ; 0                                              ;
+; Total pins                         ; 67                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/26/2024 09:59:05 ;
+; Start date & time ; 11/26/2024 21:01:25 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; riscsingle          ;
 +-------------------+---------------------+
@@ -78,7 +78,8 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+--------------------------------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value                        ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+--------------------------------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 154537905591997.173262594502248        ; --                                   ; --          ; --                                ;
+; AUTO_RAM_RECOGNITION                ; Off                                    ; On                                   ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 154537905591997.173266568515764        ; --                                   ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                                   ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                                   ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                                   ; --          ; eda_board_design_signal_integrity ;
@@ -89,14 +90,14 @@ https://fpgasoftware.intel.com/eula.
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                                   ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                                   ; --          ; --                                ;
 ; NUM_PARALLEL_PROCESSORS             ; 6                                      ; --                                   ; --          ; --                                ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --                                   ; riscvsingle ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --                                   ; riscvsingle ; Top                               ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --                                   ; riscvsingle ; Top                               ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --                                   ; top         ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --                                   ; top         ; Top                               ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --                                   ; top         ; Top                               ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --                                   ; --          ; --                                ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --                                   ; --          ; --                                ;
 ; PROJECT_IP_REGENERATION_POLICY      ; ALWAYS_REGENERATE_IP                   ; SKIP_REGENERATING_IP_IF_HDL_MODIFIED ; --          ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --                                   ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                    ; riscvsingle                            ; riscsingle                           ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                    ; top                                    ; riscsingle                           ; --          ; --                                ;
 ; VHDL_INPUT_VERSION                  ; VHDL_2008                              ; VHDL_1993                            ; --          ; --                                ;
 ; VHDL_SHOW_LMF_MAPPING_MESSAGES      ; Off                                    ; --                                   ; --          ; --                                ;
 +-------------------------------------+----------------------------------------+--------------------------------------+-------------+-----------------------------------+
@@ -107,8 +108,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:31     ; 1.0                     ; 4885 MB             ; 00:00:34                           ;
-; Total                ; 00:00:31     ; --                      ; --                  ; 00:00:34                           ;
+; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 4842 MB             ; 00:00:17                           ;
+; Total                ; 00:00:18     ; --                      ; --                  ; 00:00:17                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
